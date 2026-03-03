@@ -1,0 +1,29 @@
+.sucursal-card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  width: 100%;
+}
+
+.sucursal-imagen img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sucursal-info h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.sucursal-info h4 {
+  margin: 5px 0 15px 0;
+  color: #8b0000;
+}
+
+.sucursal-info p {
+  line-height: 1.6;
+  color: #555;
+}
