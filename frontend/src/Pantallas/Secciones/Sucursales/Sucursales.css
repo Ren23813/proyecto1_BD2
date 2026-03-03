@@ -1,0 +1,16 @@
+.sucursales {
+ width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  
+  margin: 0px;
+
+}
+
+.sucursales h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}

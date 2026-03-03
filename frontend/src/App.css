@@ -1,13 +1,38 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0rem;
   text-align: center;
+}
+
+.fondoa {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f8f8f8;
+
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(0, 49, 247, 0.1) 0px,
+      rgba(0, 49, 247, 0.1) 30px,
+      transparent 30px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 49, 247, 0.1) 0px,
+      rgba(0, 49, 247, 0.1) 30px,
+      transparent 30px,
+      transparent 80px
+    );
 }
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  padding: 0em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -33,10 +58,4 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
