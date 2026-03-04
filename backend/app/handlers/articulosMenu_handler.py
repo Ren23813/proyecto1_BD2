@@ -79,3 +79,38 @@ async def eliminar_articulo(id: str):
     if resultado.matched_count == 0:
         raise HTTPException(status_code=404, detail="Artículo no encontrado")
     return {"mensaje": "Artículo desactivado correctamente"}
+
+# AGGREGATION
+@router.get("/reportes/mas-vendidos")
+async def platos_mas_vendidos(limite: int = 10):
+    pipeline = [
+        { "$unwind": "$items" },
+        {
+            "$group": {
+                "_id": "$items.articuloId",
+                "cantidadVendida": { "$sum": "$items.cantidad" }
+            }
+        },
+        { "$sort": { "cantidadVendida": -1 } },
+        { "$limit": limite },
+        {
+            "$lookup": {
+                "from": "articulosMenu",
+                "localField": "_id",
+                "foreignField": "_id",
+                "as": "articulo"
+            }
+        },
+        { "$unwind": "$articulo" },
+        {
+            "$project": {
+                "_id": 0,
+                "articuloId": {"$toString": "$_id"},
+                "nombre": "$articulo.nombre",
+                "cantidadVendida": 1
+            }
+        }
+    ]
+
+    cursor = db["ordenes"].aggregate(pipeline)
+    return await cursor.to_list(length=limite)

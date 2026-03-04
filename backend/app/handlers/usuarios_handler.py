@@ -94,3 +94,39 @@ async def eliminar_usuario(id: str):
     if resultado.matched_count == 0:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
     return {"mensaje": "Usuario desactivado correctamente"}
+
+# AGGREGATION
+@router.get("/reportes/top-gastadores")
+async def usuarios_top_gastadores(limite: int = 10):
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$usuarioId",
+                "totalGastado": { "$sum": "$total" },
+                "totalOrdenes": { "$sum": 1 }
+            }
+        },
+        { "$sort": { "totalGastado": -1 } },
+        { "$limit": limite },
+        {
+            "$lookup": {
+                "from": "usuarios",
+                "localField": "_id",
+                "foreignField": "_id",
+                "as": "usuario"
+            }
+        },
+        { "$unwind": "$usuario" },
+        {
+            "$project": {
+                "_id": 0,
+                "usuarioId": {"$toString": "$_id"},
+                "nombre": "$usuario.nombre",
+                "totalGastado": 1,
+                "totalOrdenes": 1
+            }
+        }
+    ]
+
+    cursor = db["ordenes"].aggregate(pipeline)
+    return await cursor.to_list(length=limite)
