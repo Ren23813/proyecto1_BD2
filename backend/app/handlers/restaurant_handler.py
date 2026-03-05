@@ -200,3 +200,30 @@ async def top_restaurantes_ingresos(limite: int = 10):
 
     cursor = db["ordenes"].aggregate(pipeline)
     return await cursor.to_list(length=limite)
+
+
+#traer las reseñas del restaruante (por id)
+@router.get("/{id}/resenas")
+async def obtener_resenas_restaurante(id: str):
+
+    validar_object_id(id)
+
+    restaurante = await coleccion.find_one({"_id": ObjectId(id)})
+    if not restaurante:
+        raise HTTPException(status_code=404, detail="Restaurante no encontrado")
+
+    resenas = []
+    cursor = db["resenas"].find(
+        {"restauranteId": ObjectId(id)}
+    ).sort("calificacion", -1)
+
+    async for r in cursor:
+        resenas.append({
+            "id": str(r["_id"]),
+            "usuarioId": str(r["usuarioId"]),
+            "calificacion": r["calificacion"],
+            "comentario": r.get("comentario"),
+            "fecha": r["fecha"]
+        })
+
+    return resenas

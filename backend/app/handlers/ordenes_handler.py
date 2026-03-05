@@ -58,62 +58,122 @@ def validar_object_id(id: str):
 # CREATE
 @router.post("/")
 async def crear_orden(data: OrdenCreate):
+    validar_object_id(data.usuarioId)
+    validar_object_id(data.restauranteId)
+
+    if not data.items:
+        raise HTTPException(status_code=400, detail="La orden debe contener al menos un artículo")
+
+    # Validar usuario
+    usuario = await db["usuarios"].find_one({"_id": ObjectId(data.usuarioId)})
+    if not usuario or not usuario.get("activo", True):
+        raise HTTPException(status_code=404, detail="Usuario no válido")
+
+    # Validar restaurante
+    restaurante = await db["restaurantes"].find_one({"_id": ObjectId(data.restauranteId)})
+    if not restaurante or not restaurante.get("activo", True):
+        raise HTTPException(status_code=404, detail="Restaurante no válido")
+
+    # TRANSACCIÓN
     async with await db.client.start_session() as session:
-        async with session.start_transaction():
-            total_orden = 0.0
-            items_orden = []
+        try:
+            async with session.start_transaction():
 
-            for item in data.items:
-                articulo = await db["articulosMenu"].find_one(
-                    {"_id": ObjectId(item.articuloId)},
-                    session=session
-                )
-                
-                if not articulo:
-                    raise HTTPException(status_code=404, detail=f"Artículo {item.articuloId} no encontrado")
+                total_orden = 0.0
+                items_orden = []
 
-                precio_unitario = articulo.get("precio", 0.0)
-                total_orden += precio_unitario * item.cantidad
+                for item in data.items:
 
-                items_orden.append({
-                    "articuloId": ObjectId(item.articuloId),
-                    "cantidad": item.cantidad,
-                    "precioUnitario": precio_unitario
-                })
+                    if not ObjectId.is_valid(item.articuloId):
+                        raise HTTPException(400, detail="ID de artículo inválido")
 
-                # Descontar ingredientes del inventario
-                for ing in articulo.get("ingredientes", []):
-                    resultado = await db["ingredientes"].update_one(
+                    if item.cantidad <= 0:
+                        raise HTTPException(400, detail="Cantidad inválida")
+
+                    # Validar que el artículo pertenezca al restaurante
+                    articulo = await db["articulosMenu"].find_one(
                         {
-                            "_id": ObjectId(ing["ingredienteId"]),
-                            "cantidadDisponible": {"$gte": ing["cantidad"] * item.cantidad}
-                        },
-                        {
-                            "$inc": {
-                                "cantidadDisponible": -(ing["cantidad"] * item.cantidad)
-                            }
+                            "_id": ObjectId(item.articuloId),
+                            "restauranteId": ObjectId(data.restauranteId)
                         },
                         session=session
                     )
-                    
-                    if resultado.modified_count == 0:
-                        raise HTTPException(status_code=400, detail="Inventario insuficiente para crear la orden")
 
-            nueva_orden = {
-                "usuarioId": ObjectId(data.usuarioId),
-                "restauranteId": ObjectId(data.restauranteId),
-                "items": items_orden,
-                "total": total_orden,
-                "estado": "Completada",
-                "metodoPago": data.metodoPago,
-                "tipoOrden": data.tipoOrden,
-                "fechaPedido": datetime.utcnow()
-            }
+                    if not articulo:
+                        raise HTTPException(
+                            status_code=404,
+                            detail=f"Artículo {item.articuloId} no encontrado en este restaurante"
+                        )
 
-            resultado_orden = await coleccion.insert_one(nueva_orden, session=session)
-            orden_creada = await coleccion.find_one({"_id": resultado_orden.inserted_id}, session=session)
-            
-            return orden_serializer(orden_creada)
+                    if not articulo.get("disponible", True):
+                        raise HTTPException(
+                            status_code=400,
+                            detail=f"Artículo {articulo['nombre']} no disponible"
+                        )
+
+                    precio_unitario = articulo["precio"]
+                    total_orden += precio_unitario * item.cantidad
+
+                    items_orden.append({
+                        "articuloId": ObjectId(item.articuloId),
+                        "cantidad": item.cantidad,
+                        "precioUnitario": precio_unitario
+                    })
+
+                    # descontar de inventario
+                    for ing in articulo.get("ingredientes", []):
+
+                        cantidad_necesaria = ing["cantidad"] * item.cantidad
+
+                        resultado = await db["ingredientes"].update_one(
+                            {
+                                "_id": ObjectId(ing["ingredienteId"]),
+                                "restauranteId": ObjectId(data.restauranteId),
+                                "cantidadDisponible": {"$gte": cantidad_necesaria}
+                            },
+                            {
+                                "$inc": {
+                                    "cantidadDisponible": -cantidad_necesaria
+                                }
+                            },
+                            session=session
+                        )
+
+                        if resultado.modified_count == 0:
+                            raise HTTPException(
+                                status_code=400,
+                                detail=f"Inventario insuficiente para ingrediente {ing['ingredienteId']}"
+                            )
+
+
+                # crear nueva orden
+                nueva_orden = {
+                    "usuarioId": ObjectId(data.usuarioId),
+                    "restauranteId": ObjectId(data.restauranteId),
+                    "items": items_orden,
+                    "total": total_orden,
+                    "estado": "Pendiente",  
+                    "metodoPago": data.metodoPago,
+                    "tipoOrden": data.tipoOrden,
+                    "fechaPedido": datetime.utcnow()
+                }
+
+                resultado_orden = await coleccion.insert_one(
+                    nueva_orden,
+                    session=session
+                )
+
+                orden_creada = await coleccion.find_one(
+                    {"_id": resultado_orden.inserted_id},
+                    session=session
+                )
+
+                return orden_serializer(orden_creada)
+
+        except HTTPException:
+            raise  
+        except Exception as e:
+            raise HTTPException(status_code=500, detail="Error interno al crear la orden")
 
 
 # READ all
