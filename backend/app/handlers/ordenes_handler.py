@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, UploadFile, File
 from app.db import db
 from bson import ObjectId
 from datetime import datetime
@@ -178,9 +178,14 @@ async def crear_orden(data: OrdenCreate):
 
 # READ all
 @router.get("/")
-async def obtener_ordenes():
+async def obtener_ordenes(skip: int = 0, limit: int = 10):
+
     ordenes = []
-    cursor = coleccion.find()
+
+    cursor = coleccion.find() \
+        .sort("fechaPedido", -1) \
+        .skip(skip) \
+        .limit(limit)
 
     async for orden in cursor:
         ordenes.append(orden_serializer(orden))
@@ -265,3 +270,43 @@ async def ventas_por_mes():
         })
         
     return reporte
+
+@router.put("/completar-pendientes")
+async def completar_ordenes_pendientes():
+
+    resultado = await coleccion.update_many(
+        {"estado": "Pendiente"},
+        {"$set": {"estado": "Completada"}}
+    )
+
+    return {
+        "mensaje": "Órdenes actualizadas correctamente",
+        "modificadas": resultado.modified_count
+    }
+
+
+#GRIDFS
+@router.post("/subir-reporte")
+async def subir_archivo(file: UploadFile = File(...)):
+
+    contenido = await file.read()
+
+    file_id = await db.fs.upload_from_stream(
+        file.filename,
+        contenido
+    )
+
+    return {"file_id": str(file_id)}
+
+
+#Gridfs
+@router.get("/archivo/{file_id}")
+async def descargar_archivo(file_id: str):
+
+    if not ObjectId.is_valid(file_id):
+        raise HTTPException(400, "ID inválido")
+
+    stream = await db.fs.open_download_stream(ObjectId(file_id))
+    contenido = await stream.read()
+
+    return contenido

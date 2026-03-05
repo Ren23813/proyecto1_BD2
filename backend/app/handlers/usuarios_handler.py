@@ -130,3 +130,12 @@ async def usuarios_top_gastadores(limite: int = 10):
 
     cursor = db["ordenes"].aggregate(pipeline)
     return await cursor.to_list(length=limite)
+
+@router.get("/count/activos")
+async def contar_usuarios_activos():
+
+    total = await coleccion.count_documents({"activo": True})
+
+    return {
+        "usuariosActivos": total
+    }

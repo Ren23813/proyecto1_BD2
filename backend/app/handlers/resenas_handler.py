@@ -156,3 +156,19 @@ async def eliminar_resena(id: str):
         raise HTTPException(status_code=404, detail="Reseña no encontrada")
 
     return {"mensaje": "Reseña eliminada correctamente"}
+
+
+@router.delete("/restaurante/{restaurante_id}")
+async def eliminar_resenas_restaurante(restaurante_id: str):
+
+    if not ObjectId.is_valid(restaurante_id):
+        raise HTTPException(400, "ID inválido")
+
+    resultado = await coleccion.delete_many(
+        {"restauranteId": ObjectId(restaurante_id)}
+    )
+
+    return {
+        "mensaje": "Reseñas eliminadas",
+        "eliminadas": resultado.deleted_count
+    }

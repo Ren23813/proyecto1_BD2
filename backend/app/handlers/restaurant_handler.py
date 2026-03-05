@@ -227,3 +227,14 @@ async def obtener_resenas_restaurante(id: str):
         })
 
     return resenas
+
+
+@router.get("/categorias/distintas")
+async def categorias_distintas():
+
+    categorias = await coleccion.distinct("categoria")
+
+    return {
+        "categorias": categorias,
+        "total": len(categorias)
+    }
