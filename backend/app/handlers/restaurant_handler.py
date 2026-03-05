@@ -164,3 +164,39 @@ async def obtener_restaurantes_cercanos(
         restaurantes.append(restaurante)
 
     return restaurantes
+
+# AGGREGATION
+@router.get("/reportes/top-ingresos")
+async def top_restaurantes_ingresos(limite: int = 10):
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$restauranteId",
+                "totalIngresos": { "$sum": "$total" },
+                "totalOrdenes": { "$sum": 1 }
+            }
+        },
+        { "$sort": { "totalIngresos": -1 } },
+        { "$limit": limite },
+        {
+            "$lookup": {
+                "from": "restaurantes",
+                "localField": "_id",
+                "foreignField": "_id",
+                "as": "restaurante"
+            }
+        },
+        { "$unwind": "$restaurante" },
+        {
+            "$project": {
+                "_id": 0,
+                "restauranteId": {"$toString": "$_id"},
+                "restaurante": "$restaurante.nombre",
+                "totalIngresos": 1,
+                "totalOrdenes": 1
+            }
+        }
+    ]
+
+    cursor = db["ordenes"].aggregate(pipeline)
+    return await cursor.to_list(length=limite)
