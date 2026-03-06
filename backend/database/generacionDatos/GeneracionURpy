@@ -1,0 +1,145 @@
+import json
+import random
+from datetime import datetime, timedelta
+from faker import Faker
+import csv
+import pycountry
+import pandas as pd
+
+#librería para generación de data
+fake = Faker()
+
+#Generar usuarios
+def generar_usuarios(cantidad=10000, archivo_salida="usuarios.json"):
+    usuarios = []
+    fecha_inicio = datetime(2022, 1, 1)
+    fecha_fin = datetime.now()
+    rango_dias = (fecha_fin - fecha_inicio).days
+
+    for i in range(cantidad):
+        fecha_registro = fecha_inicio + timedelta(days=random.randint(0, rango_dias))
+
+        usuario = {
+            "nombre": fake.name(),
+            "email": f"usuario{i}@correo.com",  # garantiza unicidad
+            "roles": ["admin"] if random.random() < 0.05 else ["cliente"],
+            "fechaRegistro": fecha_registro.isoformat(),
+            "activo": random.random() < 0.9,  # 90% activos
+            "nit": 100000000 + i
+        }
+
+        usuarios.append(usuario)
+
+    with open(archivo_salida, "w", encoding="utf-8") as f:
+        json.dump(usuarios, f, indent=2, ensure_ascii=False)
+
+    print(f"Se generaron {cantidad} usuarios en {archivo_salida}")
+
+
+#Para las coordenadas se utilizó un df 
+def obtener_nombre_pais(codigo_iso):
+    try:
+        pais = pycountry.countries.get(alpha_2=codigo_iso.upper())
+        return pais.name if pais else codigo_iso
+    except:
+        return codigo_iso
+
+
+
+
+LATAM_ISO2 = {
+    "GT","MX","CO","AR","CL","PE","EC","BO","PY","UY",
+    "CR","SV","HN","NI","PA","BR","DO"
+}
+
+#Funcion de generar restaurantes realistas, prioridad en latinoamérica y procurando que 
+#sean las ciudades más populares de cada país
+def generar_restaurantes(csv_path, total_restaurantes=300):
+    df = pd.read_csv(csv_path)
+
+    # Convertir población a número
+    df["population"] = pd.to_numeric(df["population"], errors="coerce")
+    df = df.dropna(subset=["population"])
+
+    # Ordenar por país y población descendente
+    df = df.sort_values(["iso2", "population"], ascending=[True, False])
+
+    restaurantes = []
+    contador_por_pais = {}
+
+    # Agrupar por país
+    grupos = df.groupby("iso2")
+
+    # 🔹 FASE 1: ciudad más grande de cada país
+    for iso2, grupo in grupos:
+        ciudad = grupo.iloc[0]
+        restaurante = crear_restaurante(ciudad)
+        restaurantes.append(restaurante)
+        contador_por_pais[iso2] = 1
+
+    # 🔹 FASE 2: asegurar mínimo 2 en LATAM
+    for iso2 in LATAM_ISO2:
+        if iso2 in grupos.groups and contador_por_pais.get(iso2, 0) < 2:
+            grupo = grupos.get_group(iso2)
+            if len(grupo) > 1:
+                ciudad = grupo.iloc[1]
+                restaurante = crear_restaurante(ciudad)
+                restaurantes.append(restaurante)
+                contador_por_pais[iso2] = 2
+
+    # 🔹 FASE 3: completar hasta 300
+    if len(restaurantes) < total_restaurantes:
+        for iso2, grupo in grupos:
+            for i in range(1, len(grupo)):
+                if len(restaurantes) >= total_restaurantes:
+                    break
+
+                if contador_por_pais.get(iso2, 0) > i:
+                    continue
+
+                ciudad = grupo.iloc[i]
+                restaurante = crear_restaurante(ciudad)
+                restaurantes.append(restaurante)
+                contador_por_pais[iso2] = contador_por_pais.get(iso2, 0) + 1
+
+            if len(restaurantes) >= total_restaurantes:
+                break
+
+    # Exportar JSON
+    with open("restaurants.json", "w", encoding="utf-8") as f:
+        json.dump(restaurantes, f, ensure_ascii=False, indent=4)
+
+    print(f"Se generaron {len(restaurantes)} restaurantes.")
+
+
+
+CATEGORIAS_POSIBLES = [
+    "Fine Dining", "Casual Dining", "Fast Casual", "Fast Food", "Trattoria", "Ristorante", "Osteria"
+]
+
+def crear_restaurante(ciudad):
+    lat_random = float(ciudad["lat"]) 
+    lng_random = float(ciudad["lng"])
+
+    categorias = random.sample(CATEGORIAS_POSIBLES, random.randint(1, 3))
+
+    return {
+        "nombre": f"Restaurante {ciudad['city_ascii']} {ciudad['country']}",
+        "direccion": f"{ciudad['city']}, {ciudad['country']}",
+        "telefono": f"+{random.randint(1, 999)} {random.randint(10000000,99999999)}",
+        "calificacionPromedio": round(random.uniform(3.0, 5.0), 1),
+        "totalResenas": random.randint(0, 5000),
+        "activo": random.choice([True, True, True, False]),  # mayoría activos
+        "fechaRegistro": datetime.utcnow().isoformat(),
+        "categoria": categorias,
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [float(lng_random), float(lat_random)]
+        }
+    }
+
+
+
+
+generar_restaurantes("worldcities.csv", total_restaurantes=300)
+#generar_usuarios()

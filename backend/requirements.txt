@@ -3,3 +3,4 @@ uvicorn
 motor 
 pydantic[email] 
 dnspython
+faker
