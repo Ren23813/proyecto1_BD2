@@ -1,0 +1,6005 @@
+[
+    {
+        "nombre": "Restaurante Andorra la Vella Andorra",
+        "direccion": "Andorra la Vella, Andorra",
+        "telefono": "+104 39530874",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 4076,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5,
+                42.5
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dubai United Arab Emirates",
+        "direccion": "Dubai, United Arab Emirates",
+        "telefono": "+493 46601836",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 3875,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.2972,
+                25.2631
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kabul Afghanistan",
+        "direccion": "Kabul, Afghanistan",
+        "telefono": "+913 64266131",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 3590,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.1783,
+                34.5253
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint John's Antigua and Barbuda",
+        "direccion": "Saint John’s, Antigua and Barbuda",
+        "telefono": "+502 96162498",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 3077,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fine Dining",
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.85,
+                17.1167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante The Valley Anguilla",
+        "direccion": "The Valley, Anguilla",
+        "telefono": "+783 13644895",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 121,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -63.0517,
+                18.2208
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tirana Albania",
+        "direccion": "Tirana, Albania",
+        "telefono": "+8 39893460",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3255,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                19.8186,
+                41.3272
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Yerevan Armenia",
+        "direccion": "Yerevan, Armenia",
+        "telefono": "+196 23855295",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2528,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual",
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                44.5144,
+                40.1814
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Luanda Angola",
+        "direccion": "Luanda, Angola",
+        "telefono": "+637 73078816",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2124,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                13.2344,
+                -8.8383
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Buenos Aires Argentina",
+        "direccion": "Buenos Aires, Argentina",
+        "telefono": "+345 19919494",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 1618,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -58.3814,
+                -34.6036
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Pago Pago American Samoa",
+        "direccion": "Pago Pago, American Samoa",
+        "telefono": "+320 14166415",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2869,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -170.7046,
+                -14.274
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Vienna Austria",
+        "direccion": "Vienna, Austria",
+        "telefono": "+178 27238769",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 525,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                16.3725,
+                48.2083
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Melbourne Australia",
+        "direccion": "Melbourne, Australia",
+        "telefono": "+62 31066378",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 547,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                144.9631,
+                -37.8142
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Oranjestad Aruba",
+        "direccion": "Oranjestad, Aruba",
+        "telefono": "+946 76314320",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 544,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -70.0358,
+                12.5186
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Baku Azerbaijan",
+        "direccion": "Baku, Azerbaijan",
+        "telefono": "+290 86104149",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 1073,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                49.8352,
+                40.3667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sarajevo Bosnia and Herzegovina",
+        "direccion": "Sarajevo, Bosnia and Herzegovina",
+        "telefono": "+959 46103158",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 529,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Osteria",
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                18.4131,
+                43.8564
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bridgetown Barbados",
+        "direccion": "Bridgetown, Barbados",
+        "telefono": "+275 29144925",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 934,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -59.6131,
+                13.0969
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dhaka Bangladesh",
+        "direccion": "Dhaka, Bangladesh",
+        "telefono": "+376 88869728",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 2547,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                90.3944,
+                23.7289
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Brussels Belgium",
+        "direccion": "Brussels, Belgium",
+        "telefono": "+724 92522641",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 894,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Ristorante",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                4.3525,
+                50.8467
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ouagadougou Burkina Faso",
+        "direccion": "Ouagadougou, Burkina Faso",
+        "telefono": "+43 69327862",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 4474,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining",
+            "Trattoria",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -1.5275,
+                12.3686
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sofia Bulgaria",
+        "direccion": "Sofia, Bulgaria",
+        "telefono": "+102 93904053",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 475,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                23.3217,
+                42.6979
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Manama Bahrain",
+        "direccion": "Manama, Bahrain",
+        "telefono": "+656 14443076",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 3485,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Casual Dining",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                50.5875,
+                26.2233
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bujumbura Burundi",
+        "direccion": "Bujumbura, Burundi",
+        "telefono": "+970 67398563",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 2843,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                29.3667,
+                -3.3833
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Cotonou Benin",
+        "direccion": "Cotonou, Benin",
+        "telefono": "+734 43409100",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 953,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                2.4333,
+                6.3667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Gustavia Saint Barthelemy",
+        "direccion": "Gustavia, Saint Barthelemy",
+        "telefono": "+449 76147417",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 4041,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Casual Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -62.8506,
+                17.8979
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Hamilton Bermuda",
+        "direccion": "Hamilton, Bermuda",
+        "telefono": "+258 10584111",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 4454,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -64.7819,
+                32.2942
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bandar Seri Begawan Brunei",
+        "direccion": "Bandar Seri Begawan, Brunei",
+        "telefono": "+24 61121673",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2778,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual",
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                114.9422,
+                4.8903
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Santa Cruz de la Sierra Bolivia",
+        "direccion": "Santa Cruz de la Sierra, Bolivia",
+        "telefono": "+359 65586238",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 3910,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -63.1975,
+                -17.7892
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kralendijk Bonaire, Sint Eustatius, and Saba",
+        "direccion": "Kralendijk, Bonaire, Sint Eustatius, and Saba",
+        "telefono": "+916 68244230",
+        "calificacionPromedio": 5.0,
+        "totalResenas": 3292,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -68.2656,
+                12.1444
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sao Paulo Brazil",
+        "direccion": "São Paulo, Brazil",
+        "telefono": "+518 74095747",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 3893,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Trattoria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -46.6339,
+                -23.5504
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nassau Bahamas, The",
+        "direccion": "Nassau, Bahamas, The",
+        "telefono": "+252 17165104",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 973,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -77.3503,
+                25.0442
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Thimphu Bhutan",
+        "direccion": "Thimphu, Bhutan",
+        "telefono": "+190 76777558",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 2986,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                89.6361,
+                27.4722
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Gaborone Botswana",
+        "direccion": "Gaborone, Botswana",
+        "telefono": "+302 28043863",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 3387,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                25.9086,
+                -24.6569
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Minsk Belarus",
+        "direccion": "Minsk, Belarus",
+        "telefono": "+987 18624967",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2772,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                27.5586,
+                53.9006
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Belize City Belize",
+        "direccion": "Belize City, Belize",
+        "telefono": "+916 95202601",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2820,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -88.1886,
+                17.4986
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Toronto Canada",
+        "direccion": "Toronto, Canada",
+        "telefono": "+305 90552648",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 1350,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -79.3733,
+                43.7417
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kinshasa Congo (Kinshasa)",
+        "direccion": "Kinshasa, Congo (Kinshasa)",
+        "telefono": "+432 59380064",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 339,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                15.3119,
+                -4.3219
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bangui Central African Republic",
+        "direccion": "Bangui, Central African Republic",
+        "telefono": "+871 73334248",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 3223,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Casual",
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                18.5628,
+                4.3733
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Brazzaville Congo (Brazzaville)",
+        "direccion": "Brazzaville, Congo (Brazzaville)",
+        "telefono": "+865 52925807",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 2850,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining",
+            "Fast Casual",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                15.2667,
+                -4.2667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Zurich Switzerland",
+        "direccion": "Zürich, Switzerland",
+        "telefono": "+502 22520053",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3944,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                8.5411,
+                47.3744
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Abidjan Côte d’Ivoire",
+        "direccion": "Abidjan, Côte d’Ivoire",
+        "telefono": "+476 49650734",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 2099,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Osteria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -4.0267,
+                5.3364
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Avarua Cook Islands",
+        "direccion": "Avarua, Cook Islands",
+        "telefono": "+766 52932980",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 2851,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Trattoria",
+            "Fine Dining",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -159.771,
+                -21.207
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Santiago Chile",
+        "direccion": "Santiago, Chile",
+        "telefono": "+255 58851296",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 1897,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -70.6506,
+                -33.4372
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Douala Cameroon",
+        "direccion": "Douala, Cameroon",
+        "telefono": "+964 89747810",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 4330,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                9.7,
+                4.05
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Guangzhou China",
+        "direccion": "Guangzhou, China",
+        "telefono": "+54 27500309",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 3739,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                113.26,
+                23.13
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bogota Colombia",
+        "direccion": "Bogotá, Colombia",
+        "telefono": "+220 98063289",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 878,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Osteria",
+            "Fine Dining",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -74.0722,
+                4.7111
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Jose Costa Rica",
+        "direccion": "San José, Costa Rica",
+        "telefono": "+982 25166428",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 891,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Trattoria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -84.08,
+                9.9325
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Havana Cuba",
+        "direccion": "Havana, Cuba",
+        "telefono": "+771 48769872",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 3180,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -82.3589,
+                23.1367
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mindelo Cabo Verde",
+        "direccion": "Mindelo, Cabo Verde",
+        "telefono": "+33 31965564",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 2549,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Ristorante",
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -24.988,
+                16.886
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Willemstad Curaçao",
+        "direccion": "Willemstad, Curaçao",
+        "telefono": "+255 90467522",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 1633,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -68.935,
+                12.108
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Flying Fish Cove Christmas Island",
+        "direccion": "Flying Fish Cove, Christmas Island",
+        "telefono": "+197 43451191",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 1216,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                105.6728,
+                -10.4261
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nicosia Cyprus",
+        "direccion": "Nicosia, Cyprus",
+        "telefono": "+673 66078315",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 298,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining",
+            "Osteria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                33.365,
+                35.1725
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Prague Czechia",
+        "direccion": "Prague, Czechia",
+        "telefono": "+905 64433192",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 3286,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.501575",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                14.4214,
+                50.0875
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Berlin Germany",
+        "direccion": "Berlin, Germany",
+        "telefono": "+680 20985348",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 1733,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.512744",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                13.405,
+                52.52
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Djibouti Djibouti",
+        "direccion": "Djibouti, Djibouti",
+        "telefono": "+452 36064271",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 1888,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.512744",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                43.1481,
+                11.5944
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Copenhagen Denmark",
+        "direccion": "Copenhagen, Denmark",
+        "telefono": "+886 49649621",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 1115,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.512744",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                12.5615,
+                55.6805
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Roseau Dominica",
+        "direccion": "Roseau, Dominica",
+        "telefono": "+430 62620742",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 4521,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.512744",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.3883,
+                15.3014
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Santiago Dominican Republic",
+        "direccion": "Santiago, Dominican Republic",
+        "telefono": "+499 15326693",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 1585,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.512744",
+        "categoria": [
+            "Casual Dining",
+            "Fast Casual",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -70.6889,
+                19.4572
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Algiers Algeria",
+        "direccion": "Algiers, Algeria",
+        "telefono": "+505 25979525",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 3528,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                3.0872,
+                36.7325
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Guayaquil Ecuador",
+        "direccion": "Guayaquil, Ecuador",
+        "telefono": "+810 67529364",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 1139,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -79.8875,
+                -2.19
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tallinn Estonia",
+        "direccion": "Tallinn, Estonia",
+        "telefono": "+507 78500152",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 434,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                24.7453,
+                59.4372
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Cairo Egypt",
+        "direccion": "Cairo, Egypt",
+        "telefono": "+38 17868913",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1699,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                31.2358,
+                30.0444
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Asmara Eritrea",
+        "direccion": "Asmara, Eritrea",
+        "telefono": "+704 32973431",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 1131,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                38.9411,
+                15.3358
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Madrid Spain",
+        "direccion": "Madrid, Spain",
+        "telefono": "+653 19938418",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 2320,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Casual",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -3.7033,
+                40.4169
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Addis Ababa Ethiopia",
+        "direccion": "Addis Ababa, Ethiopia",
+        "telefono": "+387 47417135",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 1276,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                38.74,
+                9.03
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Helsinki Finland",
+        "direccion": "Helsinki, Finland",
+        "telefono": "+165 39640452",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 1279,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                24.9375,
+                60.1708
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Suva Fiji",
+        "direccion": "Suva, Fiji",
+        "telefono": "+59 67689791",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 635,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                178.4333,
+                -18.1333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Stanley Falkland Islands (Islas Malvinas)",
+        "direccion": "Stanley, Falkland Islands (Islas Malvinas)",
+        "telefono": "+611 61632509",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4074,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Trattoria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -57.85,
+                -51.7
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Weno Micronesia, Federated States of",
+        "direccion": "Weno, Micronesia, Federated States of",
+        "telefono": "+583 32736215",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 2555,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                151.8583,
+                7.4417
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Torshavn Faroe Islands",
+        "direccion": "Tórshavn, Faroe Islands",
+        "telefono": "+247 68631163",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 541,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -6.7833,
+                62.0
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Paris France",
+        "direccion": "Paris, France",
+        "telefono": "+565 73565001",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1683,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                2.3522,
+                48.8567
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Libreville Gabon",
+        "direccion": "Libreville, Gabon",
+        "telefono": "+365 19772188",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 1729,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                9.4544,
+                0.3901
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante London United Kingdom",
+        "direccion": "London, United Kingdom",
+        "telefono": "+49 74163610",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 2446,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -0.1275,
+                51.5072
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint George's Grenada",
+        "direccion": "Saint George’s, Grenada",
+        "telefono": "+472 50900834",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3233,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Fine Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.75,
+                12.05
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tbilisi Georgia",
+        "direccion": "Tbilisi, Georgia",
+        "telefono": "+16 36308906",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 4332,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                44.7925,
+                41.7225
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Cayenne French Guiana",
+        "direccion": "Cayenne, French Guiana",
+        "telefono": "+681 55576746",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 4749,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -52.33,
+                4.933
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint Peter Port Guernsey",
+        "direccion": "Saint Peter Port, Guernsey",
+        "telefono": "+86 61868369",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 1627,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -2.5368,
+                49.4555
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kumasi Ghana",
+        "direccion": "Kumasi, Ghana",
+        "telefono": "+238 33886604",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 4094,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -1.625,
+                6.7
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Gibraltar Gibraltar",
+        "direccion": "Gibraltar, Gibraltar",
+        "telefono": "+594 62214569",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 4741,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -5.35,
+                36.14
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nuuk Greenland",
+        "direccion": "Nuuk, Greenland",
+        "telefono": "+182 36972074",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 3643,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Osteria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -51.7361,
+                64.1767
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Banjul Gambia, The",
+        "direccion": "Banjul, Gambia, The",
+        "telefono": "+926 71755010",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 1207,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -16.5786,
+                13.4581
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Conakry Guinea",
+        "direccion": "Conakry, Guinea",
+        "telefono": "+823 40484877",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 3695,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -13.7122,
+                9.5092
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Pointe-a-Pitre Guadeloupe",
+        "direccion": "Pointe-à-Pitre, Guadeloupe",
+        "telefono": "+276 74671265",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 493,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.5331,
+                16.2411
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Malabo Equatorial Guinea",
+        "direccion": "Malabo, Equatorial Guinea",
+        "telefono": "+464 32665516",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 3847,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                8.7744,
+                3.7456
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Athens Greece",
+        "direccion": "Athens, Greece",
+        "telefono": "+836 18471876",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 4836,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                23.7281,
+                37.9842
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Grytviken South Georgia and South Sandwich Islands",
+        "direccion": "Grytviken, South Georgia and South Sandwich Islands",
+        "telefono": "+457 45337841",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 1468,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -36.508,
+                -54.2806
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Guatemala City Guatemala",
+        "direccion": "Guatemala City, Guatemala",
+        "telefono": "+202 60585192",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 3503,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Trattoria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -90.5133,
+                14.6417
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Maina Guam",
+        "direccion": "Maina, Guam",
+        "telefono": "+427 74117504",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2525,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Trattoria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                144.7332,
+                13.4692
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bissau Guinea-Bissau",
+        "direccion": "Bissau, Guinea-Bissau",
+        "telefono": "+887 96542186",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2370,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -15.5667,
+                11.85
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Georgetown Guyana",
+        "direccion": "Georgetown, Guyana",
+        "telefono": "+787 76020201",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3659,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -58.155,
+                6.8011
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Hong Kong Hong Kong",
+        "direccion": "Hong Kong, Hong Kong",
+        "telefono": "+218 70666013",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3121,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                114.2,
+                22.3
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Comayaguela Honduras",
+        "direccion": "Comayagüela, Honduras",
+        "telefono": "+57 89268204",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 2098,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -87.21,
+                14.098
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Zagreb Croatia",
+        "direccion": "Zagreb, Croatia",
+        "telefono": "+128 45950258",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 140,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                15.9772,
+                45.8131
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Port-au-Prince Haiti",
+        "direccion": "Port-au-Prince, Haiti",
+        "telefono": "+457 12219857",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 583,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -72.3386,
+                18.5425
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Budapest Hungary",
+        "direccion": "Budapest, Hungary",
+        "telefono": "+884 76386436",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 3632,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Casual Dining",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                19.0408,
+                47.4983
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Jakarta Indonesia",
+        "direccion": "Jakarta, Indonesia",
+        "telefono": "+341 56921205",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 4463,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                106.8275,
+                -6.175
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dublin Ireland",
+        "direccion": "Dublin, Ireland",
+        "telefono": "+315 49415446",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 4948,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -6.2603,
+                53.3497
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Jerusalem Israel",
+        "direccion": "Jerusalem, Israel",
+        "telefono": "+137 94167872",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 4754,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                35.2256,
+                31.7789
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Douglas Isle of Man",
+        "direccion": "Douglas, Isle of Man",
+        "telefono": "+515 32470334",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 543,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -4.4775,
+                54.15
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Delhi India",
+        "direccion": "Delhi, India",
+        "telefono": "+404 24008994",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 4870,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                77.23,
+                28.61
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Baghdad Iraq",
+        "direccion": "Baghdad, Iraq",
+        "telefono": "+759 23906395",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 1939,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                44.3661,
+                33.3153
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tehran Iran",
+        "direccion": "Tehran, Iran",
+        "telefono": "+417 15462058",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 4861,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                51.3897,
+                35.6889
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Reykjavik Iceland",
+        "direccion": "Reykjavík, Iceland",
+        "telefono": "+980 80541269",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 930,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Osteria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -21.9425,
+                64.1458
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Rome Italy",
+        "direccion": "Rome, Italy",
+        "telefono": "+32 43182640",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2410,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                12.4828,
+                41.8931
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint Helier Jersey",
+        "direccion": "Saint Helier, Jersey",
+        "telefono": "+325 87826172",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 4948,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -2.11,
+                49.1858
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kingston Jamaica",
+        "direccion": "Kingston, Jamaica",
+        "telefono": "+533 19380236",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 2032,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -76.7931,
+                17.9714
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Amman Jordan",
+        "direccion": "Amman, Jordan",
+        "telefono": "+556 53334801",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 3939,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                35.9328,
+                31.9497
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tokyo Japan",
+        "direccion": "Tokyo, Japan",
+        "telefono": "+995 47564035",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4579,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                139.7495,
+                35.687
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nairobi Kenya",
+        "direccion": "Nairobi, Kenya",
+        "telefono": "+59 82611068",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 2238,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                36.8172,
+                -1.2864
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bishkek Kyrgyzstan",
+        "direccion": "Bishkek, Kyrgyzstan",
+        "telefono": "+201 35260185",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2509,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                74.5667,
+                42.8667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Phnom Penh Cambodia",
+        "direccion": "Phnom Penh, Cambodia",
+        "telefono": "+256 17578710",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 4828,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                104.921,
+                11.5696
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tarawa Kiribati",
+        "direccion": "Tarawa, Kiribati",
+        "telefono": "+63 60650522",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 4328,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                173.0176,
+                1.3382
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mutsamudu Comoros",
+        "direccion": "Mutsamudu, Comoros",
+        "telefono": "+660 25198610",
+        "calificacionPromedio": 5.0,
+        "totalResenas": 3057,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                44.3939,
+                -12.1675
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Basseterre Saint Kitts and Nevis",
+        "direccion": "Basseterre, Saint Kitts and Nevis",
+        "telefono": "+152 13149589",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 1959,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -62.7333,
+                17.3
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Pyongyang Korea, North",
+        "direccion": "Pyongyang, Korea, North",
+        "telefono": "+372 89398006",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 1483,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                125.7475,
+                39.0167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Seoul Korea, South",
+        "direccion": "Seoul, Korea, South",
+        "telefono": "+638 94247703",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 1791,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                126.9833,
+                37.5667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kuwait City Kuwait",
+        "direccion": "Kuwait City, Kuwait",
+        "telefono": "+875 18211611",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 255,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                47.9783,
+                29.3697
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante George Town Cayman Islands",
+        "direccion": "George Town, Cayman Islands",
+        "telefono": "+40 27375136",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 3442,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -81.3811,
+                19.295
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Almaty Kazakhstan",
+        "direccion": "Almaty, Kazakhstan",
+        "telefono": "+942 97855091",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 2919,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                76.915,
+                43.24
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Vientiane Laos",
+        "direccion": "Vientiane, Laos",
+        "telefono": "+151 26528080",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 3474,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                102.63,
+                17.98
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Beirut Lebanon",
+        "direccion": "Beirut, Lebanon",
+        "telefono": "+633 21935411",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 683,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                35.5058,
+                33.8981
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Castries Saint Lucia",
+        "direccion": "Castries, Saint Lucia",
+        "telefono": "+740 30834405",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 2888,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -60.9894,
+                14.0108
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Schaan Liechtenstein",
+        "direccion": "Schaan, Liechtenstein",
+        "telefono": "+568 91798057",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 2205,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                9.5097,
+                47.1667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Colombo Sri Lanka",
+        "direccion": "Colombo, Sri Lanka",
+        "telefono": "+940 68207120",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4488,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                79.8333,
+                6.9167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Monrovia Liberia",
+        "direccion": "Monrovia, Liberia",
+        "telefono": "+300 11714152",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 4084,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -10.8014,
+                6.3133
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Maseru Lesotho",
+        "direccion": "Maseru, Lesotho",
+        "telefono": "+337 97660379",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 890,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Trattoria",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                27.48,
+                -29.31
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Vilnius Lithuania",
+        "direccion": "Vilnius, Lithuania",
+        "telefono": "+861 13248377",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4786,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                25.28,
+                54.6872
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Luxembourg Luxembourg",
+        "direccion": "Luxembourg, Luxembourg",
+        "telefono": "+327 88567719",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 1185,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                6.1319,
+                49.6117
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Riga Latvia",
+        "direccion": "Riga, Latvia",
+        "telefono": "+816 98052500",
+        "calificacionPromedio": 5.0,
+        "totalResenas": 3364,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                24.1069,
+                56.9475
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tripoli Libya",
+        "direccion": "Tripoli, Libya",
+        "telefono": "+597 26921850",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 3206,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                13.1914,
+                32.8872
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Casablanca Morocco",
+        "direccion": "Casablanca, Morocco",
+        "telefono": "+296 70481633",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 2030,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -7.5833,
+                33.5333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Monaco Monaco",
+        "direccion": "Monaco, Monaco",
+        "telefono": "+950 86839986",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 146,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Trattoria",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                7.4167,
+                43.7333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Chisinau Moldova",
+        "direccion": "Chisinau, Moldova",
+        "telefono": "+546 38219437",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 3105,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                28.8353,
+                47.0228
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Podgorica Montenegro",
+        "direccion": "Podgorica, Montenegro",
+        "telefono": "+862 31573068",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 3443,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                19.2628,
+                42.4414
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Marigot Saint Martin",
+        "direccion": "Marigot, Saint Martin",
+        "telefono": "+242 26626771",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2039,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -63.0847,
+                18.0706
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Antananarivo Madagascar",
+        "direccion": "Antananarivo, Madagascar",
+        "telefono": "+75 87883703",
+        "calificacionPromedio": 5.0,
+        "totalResenas": 3000,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                47.525,
+                -18.91
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Majuro Marshall Islands",
+        "direccion": "Majuro, Marshall Islands",
+        "telefono": "+180 98049003",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 1447,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                171.3833,
+                7.0833
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Skopje North Macedonia",
+        "direccion": "Skopje, North Macedonia",
+        "telefono": "+352 69726271",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1614,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                21.4317,
+                41.9961
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bamako Mali",
+        "direccion": "Bamako, Mali",
+        "telefono": "+229 54545617",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 1705,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -7.9922,
+                12.6458
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Rangoon Burma",
+        "direccion": "Rangoon, Burma",
+        "telefono": "+672 92006784",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 3359,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                96.16,
+                16.795
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ulaanbaatar Mongolia",
+        "direccion": "Ulaanbaatar, Mongolia",
+        "telefono": "+338 77491252",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 1429,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                106.9055,
+                47.9214
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Macau Macau",
+        "direccion": "Macau, Macau",
+        "telefono": "+330 51140219",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 3859,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                113.5461,
+                22.2006
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Capitol Hill Northern Mariana Islands",
+        "direccion": "Capitol Hill, Northern Mariana Islands",
+        "telefono": "+593 18905585",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 4390,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                145.7546,
+                15.2137
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Fort-de-France Martinique",
+        "direccion": "Fort-de-France, Martinique",
+        "telefono": "+517 85264168",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 3146,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.0667,
+                14.6
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nouakchott Mauritania",
+        "direccion": "Nouakchott, Mauritania",
+        "telefono": "+962 79453066",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 228,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -15.9785,
+                18.0858
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Brades Montserrat",
+        "direccion": "Brades, Montserrat",
+        "telefono": "+311 38140659",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 630,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -62.2106,
+                16.7928
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Valletta Malta",
+        "direccion": "Valletta, Malta",
+        "telefono": "+911 21421139",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 3422,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                14.5125,
+                35.8983
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Port Louis Mauritius",
+        "direccion": "Port Louis, Mauritius",
+        "telefono": "+369 32612293",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 2472,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                57.5042,
+                -20.1644
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Male Maldives",
+        "direccion": "Male, Maldives",
+        "telefono": "+700 88003476",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 254,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                73.5089,
+                4.1753
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lilongwe Malawi",
+        "direccion": "Lilongwe, Malawi",
+        "telefono": "+857 49084072",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 3185,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                33.7873,
+                -13.9669
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mexico City Mexico",
+        "direccion": "Mexico City, Mexico",
+        "telefono": "+547 78003216",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2104,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -99.1333,
+                19.4333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kuala Lumpur Malaysia",
+        "direccion": "Kuala Lumpur, Malaysia",
+        "telefono": "+626 51872400",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 973,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                101.698,
+                3.1686
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Maputo Mozambique",
+        "direccion": "Maputo, Mozambique",
+        "telefono": "+955 47774626",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 127,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                32.5764,
+                -25.9153
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Noumea New Caledonia",
+        "direccion": "Nouméa, New Caledonia",
+        "telefono": "+939 73951471",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 921,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                166.4443,
+                -22.2625
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Niamey Niger",
+        "direccion": "Niamey, Niger",
+        "telefono": "+445 61795710",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 4009,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                2.1175,
+                13.515
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kingston Norfolk Island",
+        "direccion": "Kingston, Norfolk Island",
+        "telefono": "+205 73578371",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 2451,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                167.9619,
+                -29.0606
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lagos Nigeria",
+        "direccion": "Lagos, Nigeria",
+        "telefono": "+426 17955151",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 1133,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                3.3841,
+                6.455
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Managua Nicaragua",
+        "direccion": "Managua, Nicaragua",
+        "telefono": "+427 39025512",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 2060,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -86.2514,
+                12.1364
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tilburg Netherlands",
+        "direccion": "Tilburg, Netherlands",
+        "telefono": "+680 33306873",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 378,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                5.0911,
+                51.5572
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Oslo Norway",
+        "direccion": "Oslo, Norway",
+        "telefono": "+669 87583281",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 2682,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                10.7389,
+                59.9133
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kathmandu Nepal",
+        "direccion": "Kathmandu, Nepal",
+        "telefono": "+203 83366274",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1813,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                85.32,
+                27.71
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Yaren Nauru",
+        "direccion": "Yaren, Nauru",
+        "telefono": "+974 85426503",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 700,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                166.925,
+                -0.5456
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Alofi Niue",
+        "direccion": "Alofi, Niue",
+        "telefono": "+948 62187725",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 856,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -169.921,
+                -19.056
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Auckland New Zealand",
+        "direccion": "Auckland, New Zealand",
+        "telefono": "+716 37368278",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 2816,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                174.7653,
+                -36.8492
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Masqat Oman",
+        "direccion": "Masqaţ, Oman",
+        "telefono": "+167 22452930",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 1053,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                58.5911,
+                23.614
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Panama City Panama",
+        "direccion": "Panama City, Panama",
+        "telefono": "+507 56134809",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2955,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -79.5347,
+                8.9711
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lima Peru",
+        "direccion": "Lima, Peru",
+        "telefono": "+242 30991648",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 2532,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -77.0375,
+                -12.06
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Papeete French Polynesia",
+        "direccion": "Papeete, French Polynesia",
+        "telefono": "+427 49450415",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 407,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -149.5667,
+                -17.5334
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Port Moresby Papua New Guinea",
+        "direccion": "Port Moresby, Papua New Guinea",
+        "telefono": "+448 60229785",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 4816,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                147.1494,
+                -9.4789
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Manila Philippines",
+        "direccion": "Manila, Philippines",
+        "telefono": "+588 35965104",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 143,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                120.9772,
+                14.5958
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Karachi Pakistan",
+        "direccion": "Karachi, Pakistan",
+        "telefono": "+568 13951020",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 2090,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                67.01,
+                24.86
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Warsaw Poland",
+        "direccion": "Warsaw, Poland",
+        "telefono": "+586 67066294",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 290,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                21.0111,
+                52.23
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint-Pierre Saint Pierre and Miquelon",
+        "direccion": "Saint-Pierre, Saint Pierre and Miquelon",
+        "telefono": "+908 58001624",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 986,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -56.1736,
+                46.7817
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Adamstown Pitcairn Islands",
+        "direccion": "Adamstown, Pitcairn Islands",
+        "telefono": "+917 78726495",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 1766,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -130.0833,
+                -25.0667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Juan Puerto Rico",
+        "direccion": "San Juan, Puerto Rico",
+        "telefono": "+519 26827293",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 1870,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -66.061,
+                18.3985
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lisbon Portugal",
+        "direccion": "Lisbon, Portugal",
+        "telefono": "+792 80182700",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 3917,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -9.134,
+                38.7122
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Koror Palau",
+        "direccion": "Koror, Palau",
+        "telefono": "+149 45832508",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 253,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                134.4792,
+                7.3419
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Asuncion Paraguay",
+        "direccion": "Asunción, Paraguay",
+        "telefono": "+46 76978345",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 2867,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -57.6435,
+                -25.2945
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Doha Qatar",
+        "direccion": "Doha, Qatar",
+        "telefono": "+91 80783111",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 3386,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                51.5333,
+                25.2867
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Saint-Denis Reunion",
+        "direccion": "Saint-Denis, Reunion",
+        "telefono": "+471 12479797",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 2789,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.4481,
+                -20.8789
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bucharest Romania",
+        "direccion": "Bucharest, Romania",
+        "telefono": "+790 38624537",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 1654,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                26.1039,
+                44.4325
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Belgrade Serbia",
+        "direccion": "Belgrade, Serbia",
+        "telefono": "+57 13663762",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 818,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                20.4569,
+                44.8178
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Moscow Russia",
+        "direccion": "Moscow, Russia",
+        "telefono": "+64 42028266",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 1689,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                37.6175,
+                55.7506
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kigali Rwanda",
+        "direccion": "Kigali, Rwanda",
+        "telefono": "+765 53671830",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 558,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                30.0606,
+                -1.9536
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Riyadh Saudi Arabia",
+        "direccion": "Riyadh, Saudi Arabia",
+        "telefono": "+48 24194870",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 880,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                46.71,
+                24.65
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Honiara Solomon Islands",
+        "direccion": "Honiara, Solomon Islands",
+        "telefono": "+19 71963940",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 4252,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                159.95,
+                -9.4333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Victoria Seychelles",
+        "direccion": "Victoria, Seychelles",
+        "telefono": "+809 28124187",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 3393,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.4525,
+                -4.6231
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Khartoum Sudan",
+        "direccion": "Khartoum, Sudan",
+        "telefono": "+473 96110491",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4697,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Osteria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                32.5265,
+                15.6031
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Stockholm Sweden",
+        "direccion": "Stockholm, Sweden",
+        "telefono": "+740 14071373",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2011,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                18.0547,
+                59.3275
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Singapore Singapore",
+        "direccion": "Singapore, Singapore",
+        "telefono": "+92 64532165",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 28,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                103.8,
+                1.3
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Jamestown Saint Helena, Ascension, and Tristan da Cunha",
+        "direccion": "Jamestown, Saint Helena, Ascension, and Tristan da Cunha",
+        "telefono": "+187 97487354",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 3333,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -5.7179,
+                -15.9251
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ljubljana Slovenia",
+        "direccion": "Ljubljana, Slovenia",
+        "telefono": "+811 28221897",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 4770,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                14.5061,
+                46.0514
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bratislava Slovakia",
+        "direccion": "Bratislava, Slovakia",
+        "telefono": "+99 80866710",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 3473,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                17.1128,
+                48.1447
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Freetown Sierra Leone",
+        "direccion": "Freetown, Sierra Leone",
+        "telefono": "+225 81889608",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 3721,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -13.2331,
+                8.4833
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Serravalle San Marino",
+        "direccion": "Serravalle, San Marino",
+        "telefono": "+570 82199695",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 4891,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                12.4817,
+                43.9717
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dakar Senegal",
+        "direccion": "Dakar, Senegal",
+        "telefono": "+229 18719603",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 534,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -17.432,
+                14.6726
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mogadishu Somalia",
+        "direccion": "Mogadishu, Somalia",
+        "telefono": "+762 39201876",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 2067,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                45.3419,
+                2.0392
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Paramaribo Suriname",
+        "direccion": "Paramaribo, Suriname",
+        "telefono": "+576 38957844",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 1131,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -55.2039,
+                5.8522
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Juba South Sudan",
+        "direccion": "Juba, South Sudan",
+        "telefono": "+34 57273136",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 857,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                31.58,
+                4.83
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sao Tome Sao Tome and Principe",
+        "direccion": "São Tomé, Sao Tome and Principe",
+        "telefono": "+21 11595231",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 2659,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                6.7306,
+                0.3361
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Salvador El Salvador",
+        "direccion": "San Salvador, El Salvador",
+        "telefono": "+78 25186708",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 1983,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -89.1914,
+                13.6989
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Philipsburg Sint Maarten",
+        "direccion": "Philipsburg, Sint Maarten",
+        "telefono": "+217 52435658",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 440,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -63.0458,
+                18.0237
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Damascus Syria",
+        "direccion": "Damascus, Syria",
+        "telefono": "+94 49604796",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 1222,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                36.2981,
+                33.502
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Manzini Eswatini",
+        "direccion": "Manzini, Eswatini",
+        "telefono": "+168 67293682",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 4026,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                31.388,
+                -26.495
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Grand Turk Turks and Caicos Islands",
+        "direccion": "Grand Turk, Turks and Caicos Islands",
+        "telefono": "+854 49342160",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 289,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -71.139,
+                21.459
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante N'Djamena Chad",
+        "direccion": "N’Djamena, Chad",
+        "telefono": "+887 54980621",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4162,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                15.0447,
+                12.1053
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lome Togo",
+        "direccion": "Lomé, Togo",
+        "telefono": "+708 88667459",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 2630,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.2153,
+                6.1308
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bangkok Thailand",
+        "direccion": "Bangkok, Thailand",
+        "telefono": "+979 13738887",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 2609,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                100.4942,
+                13.7525
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dushanbe Tajikistan",
+        "direccion": "Dushanbe, Tajikistan",
+        "telefono": "+474 33862185",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 2943,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Food",
+            "Casual Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.78,
+                38.5367
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dili Timor-Leste",
+        "direccion": "Dili, Timor-Leste",
+        "telefono": "+140 68093622",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 890,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Trattoria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                125.5795,
+                -8.5594
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ashgabat Turkmenistan",
+        "direccion": "Ashgabat, Turkmenistan",
+        "telefono": "+406 33308601",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 2467,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                58.38,
+                37.9375
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tunis Tunisia",
+        "direccion": "Tunis, Tunisia",
+        "telefono": "+885 73853176",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 1352,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                10.1817,
+                36.8064
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Nuku`alofa Tonga",
+        "direccion": "Nuku‘alofa, Tonga",
+        "telefono": "+756 71521328",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 3422,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -175.2,
+                -21.1333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Istanbul Turkey",
+        "direccion": "Istanbul, Turkey",
+        "telefono": "+181 60939943",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 4134,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                28.955,
+                41.0136
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Chaguanas Trinidad and Tobago",
+        "direccion": "Chaguanas, Trinidad and Tobago",
+        "telefono": "+504 20427725",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2891,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.4,
+                10.5167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Funafuti Tuvalu",
+        "direccion": "Funafuti, Tuvalu",
+        "telefono": "+303 25674809",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 1222,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Osteria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                179.2,
+                -8.5167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Taichung Taiwan",
+        "direccion": "Taichung, Taiwan",
+        "telefono": "+705 97435560",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 1567,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.513469",
+        "categoria": [
+            "Trattoria",
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                120.6794,
+                24.1439
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Dar es Salaam Tanzania",
+        "direccion": "Dar es Salaam, Tanzania",
+        "telefono": "+418 28286241",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 4836,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                39.2803,
+                -6.8161
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kyiv Ukraine",
+        "direccion": "Kyiv, Ukraine",
+        "telefono": "+88 53202458",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 2648,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                30.5233,
+                50.45
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kampala Uganda",
+        "direccion": "Kampala, Uganda",
+        "telefono": "+947 31022398",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1545,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Ristorante",
+            "Casual Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                32.5811,
+                0.3136
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante New York United States",
+        "direccion": "New York, United States",
+        "telefono": "+389 93369986",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 2808,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -73.9249,
+                40.6943
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Montevideo Uruguay",
+        "direccion": "Montevideo, Uruguay",
+        "telefono": "+993 86076903",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 1434,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Osteria",
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -56.1842,
+                -34.9056
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tashkent Uzbekistan",
+        "direccion": "Tashkent, Uzbekistan",
+        "telefono": "+893 76469319",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 3829,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.2797,
+                41.3111
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Vatican City Vatican City",
+        "direccion": "Vatican City, Vatican City",
+        "telefono": "+522 14596290",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 1596,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                12.453,
+                41.904
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Calliaqua Saint Vincent and the Grenadines",
+        "direccion": "Calliaqua, Saint Vincent and the Grenadines",
+        "telefono": "+714 21474624",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 1585,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -61.1928,
+                13.1308
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Caracas Venezuela",
+        "direccion": "Caracas, Venezuela",
+        "telefono": "+304 90736420",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 1204,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -66.9036,
+                10.4806
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Road Town Virgin Islands, British",
+        "direccion": "Road Town, Virgin Islands, British",
+        "telefono": "+644 40635356",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4102,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -64.6167,
+                18.4167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ho Chi Minh City Vietnam",
+        "direccion": "Ho Chi Minh City, Vietnam",
+        "telefono": "+703 81300620",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2468,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                106.7019,
+                10.7756
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Port-Vila Vanuatu",
+        "direccion": "Port-Vila, Vanuatu",
+        "telefono": "+450 28611390",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 4249,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                168.3167,
+                -17.7333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mata-Utu Wallis and Futuna",
+        "direccion": "Mata-Utu, Wallis and Futuna",
+        "telefono": "+87 15493160",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4211,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -176.1736,
+                -13.2825
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Apia Samoa",
+        "direccion": "Apia, Samoa",
+        "telefono": "+392 19520040",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 140,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -171.75,
+                -13.8333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Gaza Gaza Strip",
+        "direccion": "Gaza, Gaza Strip",
+        "telefono": "+869 32202860",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 2622,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                34.456,
+                31.5069
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Prizren Kosovo",
+        "direccion": "Prizren, Kosovo",
+        "telefono": "+68 53951964",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 520,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Casual",
+            "Ristorante",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                20.7397,
+                42.2139
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Longyearbyen Svalbard",
+        "direccion": "Longyearbyen, Svalbard",
+        "telefono": "+643 63431230",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 1779,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                15.6333,
+                78.2167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Hebron West Bank",
+        "direccion": "Hebron, West Bank",
+        "telefono": "+490 41743712",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 544,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                35.0938,
+                31.5293
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sanaa Yemen",
+        "direccion": "Sanaa, Yemen",
+        "telefono": "+917 38575442",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 820,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining",
+            "Trattoria",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                44.2064,
+                15.3483
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mamoudzou Mayotte",
+        "direccion": "Mamoudzou, Mayotte",
+        "telefono": "+152 66313061",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 2173,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                45.2278,
+                -12.7806
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Johannesburg South Africa",
+        "direccion": "Johannesburg, South Africa",
+        "telefono": "+515 53590032",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4716,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Osteria",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                28.0456,
+                -26.2044
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lusaka Zambia",
+        "direccion": "Lusaka, Zambia",
+        "telefono": "+799 68364213",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 1636,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                28.2833,
+                -15.4167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Harare Zimbabwe",
+        "direccion": "Harare, Zimbabwe",
+        "telefono": "+866 32944694",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 4421,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                31.0522,
+                -17.8292
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Miguelito Panama",
+        "direccion": "San Miguelito, Panama",
+        "telefono": "+920 96104082",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 1138,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Ristorante",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -79.4707,
+                9.0503
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante El Alto Bolivia",
+        "direccion": "El Alto, Bolivia",
+        "telefono": "+553 37196291",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 2611,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -68.1633,
+                -16.5047
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Leon Nicaragua",
+        "direccion": "León, Nicaragua",
+        "telefono": "+425 53194993",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 1777,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -86.8867,
+                12.4333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Rio de Janeiro Brazil",
+        "direccion": "Rio de Janeiro, Brazil",
+        "telefono": "+423 68803322",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 1356,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Fine Dining",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -43.2056,
+                -22.9111
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Maldonado Uruguay",
+        "direccion": "Maldonado, Uruguay",
+        "telefono": "+771 66555753",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 285,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -54.95,
+                -34.9
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tegucigalpa Honduras",
+        "direccion": "Tegucigalpa, Honduras",
+        "telefono": "+649 62880520",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 4596,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -87.204,
+                14.1057
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Santo Domingo Dominican Republic",
+        "direccion": "Santo Domingo, Dominican Republic",
+        "telefono": "+622 48294187",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 3513,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -69.8933,
+                18.4764
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ciudad del Este Paraguay",
+        "direccion": "Ciudad del Este, Paraguay",
+        "telefono": "+931 64336196",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 1853,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Osteria",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -54.6161,
+                -25.5167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Marcos Costa Rica",
+        "direccion": "San Marcos, Costa Rica",
+        "telefono": "+45 64838830",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 3913,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -84.512,
+                10.6204
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mixco Guatemala",
+        "direccion": "Mixco, Guatemala",
+        "telefono": "+896 34963959",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2717,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining",
+            "Trattoria",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -90.6064,
+                14.6331
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Cali Colombia",
+        "direccion": "Cali, Colombia",
+        "telefono": "+844 46061424",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 3041,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Ristorante",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -76.5222,
+                3.4206
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Arequipa Peru",
+        "direccion": "Arequipa, Peru",
+        "telefono": "+230 84075916",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 4778,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -71.5369,
+                -16.3989
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Concepcion Chile",
+        "direccion": "Concepción, Chile",
+        "telefono": "+510 97404817",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 1483,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -73.0514,
+                -36.8282
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Cordoba Argentina",
+        "direccion": "Córdoba, Argentina",
+        "telefono": "+533 67993942",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 2667,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fine Dining",
+            "Casual Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -64.1833,
+                -31.4167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante San Miguel El Salvador",
+        "direccion": "San Miguel, El Salvador",
+        "telefono": "+47 75453595",
+        "calificacionPromedio": 3.0,
+        "totalResenas": 753,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -88.1775,
+                13.4814
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Quito Ecuador",
+        "direccion": "Quito, Ecuador",
+        "telefono": "+653 76166374",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 3376,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Casual Dining",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -78.5125,
+                -0.22
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Guadalajara Mexico",
+        "direccion": "Guadalajara, Mexico",
+        "telefono": "+728 96147468",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 3774,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.528796",
+        "categoria": [
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                -103.3475,
+                20.6767
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sant Pere Andorra",
+        "direccion": "Sant Pere, Andorra",
+        "telefono": "+135 55067132",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4982,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.541923",
+        "categoria": [
+            "Fast Food",
+            "Fast Casual",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5,
+                42.5
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Escaldes-Engordany Andorra",
+        "direccion": "Escaldes-Engordany, Andorra",
+        "telefono": "+901 18026183",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 2202,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.541923",
+        "categoria": [
+            "Ristorante",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5408,
+                42.5089
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Encamp Andorra",
+        "direccion": "Encamp, Andorra",
+        "telefono": "+206 41492159",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 1272,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5828,
+                42.5361
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante La Massana Andorra",
+        "direccion": "La Massana, Andorra",
+        "telefono": "+459 48253274",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 3858,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Trattoria",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5144,
+                42.5444
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sant Julia de Loria Andorra",
+        "direccion": "Sant Julià de Lòria, Andorra",
+        "telefono": "+373 70951014",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 3904,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Fast Casual",
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.4911,
+                42.465
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Canillo Andorra",
+        "direccion": "Canillo, Andorra",
+        "telefono": "+795 73786444",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 1319,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Fine Dining",
+            "Fast Casual",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.6,
+                42.5667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ordino Andorra",
+        "direccion": "Ordino, Andorra",
+        "telefono": "+377 96194610",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 4064,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Fast Food",
+            "Casual Dining",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                1.5331,
+                42.555
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Abu Dhabi United Arab Emirates",
+        "direccion": "Abu Dhabi, United Arab Emirates",
+        "telefono": "+59 99584466",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2663,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.544713",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                54.3667,
+                24.4667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Sharjah United Arab Emirates",
+        "direccion": "Sharjah, United Arab Emirates",
+        "telefono": "+694 90107789",
+        "calificacionPromedio": 3.3,
+        "totalResenas": 4931,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Fast Casual",
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.3908,
+                25.3575
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Al `Ayn United Arab Emirates",
+        "direccion": "Al ‘Ayn, United Arab Emirates",
+        "telefono": "+575 57752606",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 372,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Ristorante",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.7447,
+                24.2075
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante `Ajman United Arab Emirates",
+        "direccion": "‘Ajmān, United Arab Emirates",
+        "telefono": "+308 26270179",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 662,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.4456,
+                25.4136
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ra's al Khaymah United Arab Emirates",
+        "direccion": "Ra’s al Khaymah, United Arab Emirates",
+        "telefono": "+975 91973417",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4357,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.95,
+                25.7667
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Al Fujayrah United Arab Emirates",
+        "direccion": "Al Fujayrah, United Arab Emirates",
+        "telefono": "+298 47830784",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 4399,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                56.3344,
+                25.1222
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Umm al Qaywayn United Arab Emirates",
+        "direccion": "Umm al Qaywayn, United Arab Emirates",
+        "telefono": "+440 39438591",
+        "calificacionPromedio": 3.4,
+        "totalResenas": 4445,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.5475,
+                25.5533
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kalba United Arab Emirates",
+        "direccion": "Kalbā, United Arab Emirates",
+        "telefono": "+883 77091834",
+        "calificacionPromedio": 3.2,
+        "totalResenas": 2199,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545327",
+        "categoria": [
+            "Trattoria",
+            "Fast Food",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                56.3553,
+                25.0742
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Khawr Fakkan United Arab Emirates",
+        "direccion": "Khawr Fakkān, United Arab Emirates",
+        "telefono": "+943 41334726",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 3214,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                56.35,
+                25.3333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Madinat Zayid United Arab Emirates",
+        "direccion": "Madīnat Zāyid, United Arab Emirates",
+        "telefono": "+419 92979658",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 4823,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                53.6536,
+                23.6522
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Al Jazirah al Hamra' United Arab Emirates",
+        "direccion": "Al Jazīrah al Ḩamrā’, United Arab Emirates",
+        "telefono": "+962 95083838",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 3923,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                55.7972,
+                25.7089
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Aqchah Afghanistan",
+        "direccion": "Āqchah, Afghanistan",
+        "telefono": "+762 85913174",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 2398,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                66.1858,
+                36.9114
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kandahar Afghanistan",
+        "direccion": "Kandahār, Afghanistan",
+        "telefono": "+680 94871459",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2622,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante",
+            "Fast Food"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                65.7158,
+                31.62
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Herat Afghanistan",
+        "direccion": "Herāt, Afghanistan",
+        "telefono": "+830 87765703",
+        "calificacionPromedio": 4.9,
+        "totalResenas": 4746,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                62.2031,
+                34.3419
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Farah Afghanistan",
+        "direccion": "Farāh, Afghanistan",
+        "telefono": "+969 69584408",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 941,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Casual",
+            "Fast Food",
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                62.1194,
+                32.3436
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mazar-e Sharif Afghanistan",
+        "direccion": "Mazār-e Sharīf, Afghanistan",
+        "telefono": "+633 47987522",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 956,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                67.1167,
+                36.7
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Lashkar Gah Afghanistan",
+        "direccion": "Lashkar Gāh, Afghanistan",
+        "telefono": "+443 96308685",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 2104,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                64.3692,
+                31.5831
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Kunduz Afghanistan",
+        "direccion": "Kunduz, Afghanistan",
+        "telefono": "+497 38094872",
+        "calificacionPromedio": 4.1,
+        "totalResenas": 935,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.8681,
+                36.7286
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Jalalabad Afghanistan",
+        "direccion": "Jalālābād, Afghanistan",
+        "telefono": "+855 55954956",
+        "calificacionPromedio": 3.7,
+        "totalResenas": 903,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                70.4478,
+                34.4342
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Taluqan Afghanistan",
+        "direccion": "Tāluqān, Afghanistan",
+        "telefono": "+311 61842584",
+        "calificacionPromedio": 4.7,
+        "totalResenas": 1517,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.5167,
+                36.7167
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Shibirghan Afghanistan",
+        "direccion": "Shibirghān, Afghanistan",
+        "telefono": "+496 69040497",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 3879,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining",
+            "Osteria",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                65.752,
+                36.665
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Zaranj Afghanistan",
+        "direccion": "Zaranj, Afghanistan",
+        "telefono": "+122 50317232",
+        "calificacionPromedio": 4.6,
+        "totalResenas": 2172,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                61.86,
+                30.96
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Khost Afghanistan",
+        "direccion": "Khōst, Afghanistan",
+        "telefono": "+430 58132036",
+        "calificacionPromedio": 4.8,
+        "totalResenas": 2704,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Food",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.9169,
+                33.3331
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Maimanah Afghanistan",
+        "direccion": "Maīmanah, Afghanistan",
+        "telefono": "+755 58332258",
+        "calificacionPromedio": 4.5,
+        "totalResenas": 3513,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                64.75,
+                35.9333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Mehtar Lam Afghanistan",
+        "direccion": "Mehtar Lām, Afghanistan",
+        "telefono": "+313 34724256",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 4340,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                70.2089,
+                34.6683
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Ghazni Afghanistan",
+        "direccion": "Ghaznī, Afghanistan",
+        "telefono": "+480 36675661",
+        "calificacionPromedio": 3.9,
+        "totalResenas": 2163,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Ristorante",
+            "Fast Food",
+            "Fine Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.4233,
+                33.5492
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Paghman Afghanistan",
+        "direccion": "Paghmān, Afghanistan",
+        "telefono": "+180 41631692",
+        "calificacionPromedio": 4.4,
+        "totalResenas": 844,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fine Dining",
+            "Fast Food",
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.95,
+                34.5833
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Pul-e Khumri Afghanistan",
+        "direccion": "Pul-e Khumrī, Afghanistan",
+        "telefono": "+557 73212747",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 4687,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Food",
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.7,
+                35.95
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bamyan Afghanistan",
+        "direccion": "Bāmyān, Afghanistan",
+        "telefono": "+492 32145281",
+        "calificacionPromedio": 4.2,
+        "totalResenas": 1340,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                67.8333,
+                34.825
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Charikar Afghanistan",
+        "direccion": "Chārīkār, Afghanistan",
+        "telefono": "+858 24378187",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 4634,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining",
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.1689,
+                35.0131
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Baghlan Afghanistan",
+        "direccion": "Baghlān, Afghanistan",
+        "telefono": "+169 59034407",
+        "calificacionPromedio": 4.3,
+        "totalResenas": 4121,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Trattoria",
+            "Ristorante",
+            "Fast Casual"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                68.7,
+                36.1328
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Balkh Afghanistan",
+        "direccion": "Balkh, Afghanistan",
+        "telefono": "+264 19584053",
+        "calificacionPromedio": 4.0,
+        "totalResenas": 3389,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Trattoria",
+            "Fast Casual",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                66.8981,
+                36.7581
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Tarin Kot Afghanistan",
+        "direccion": "Tarīn Kōṯ, Afghanistan",
+        "telefono": "+73 40054183",
+        "calificacionPromedio": 3.1,
+        "totalResenas": 24,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Trattoria",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                65.8733,
+                32.6267
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Gardez Afghanistan",
+        "direccion": "Gardēz, Afghanistan",
+        "telefono": "+450 82016025",
+        "calificacionPromedio": 3.8,
+        "totalResenas": 283,
+        "activo": true,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fine Dining",
+            "Ristorante"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                69.2169,
+                33.6
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Bazar-e Yakawlang Afghanistan",
+        "direccion": "Bāzār-e Yakāwlang, Afghanistan",
+        "telefono": "+751 68207969",
+        "calificacionPromedio": 3.6,
+        "totalResenas": 156,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Casual Dining"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                66.9667,
+                34.7333
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Faizabad Afghanistan",
+        "direccion": "Faīẕābād, Afghanistan",
+        "telefono": "+196 40814476",
+        "calificacionPromedio": 3.5,
+        "totalResenas": 413,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Fast Food",
+            "Trattoria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                70.58,
+                37.1166
+            ]
+        }
+    },
+    {
+        "nombre": "Restaurante Qal`ah-ye Now Afghanistan",
+        "direccion": "Qal‘ah-ye Now, Afghanistan",
+        "telefono": "+13 64703611",
+        "calificacionPromedio": 5.0,
+        "totalResenas": 2760,
+        "activo": false,
+        "fechaRegistro": "2026-03-04T17:34:55.545833",
+        "categoria": [
+            "Osteria"
+        ],
+        "ubicacion": {
+            "type": "Point",
+            "coordinates": [
+                63.1292,
+                34.9867
+            ]
+        }
+    }
+]
