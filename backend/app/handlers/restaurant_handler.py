@@ -164,3 +164,77 @@ async def obtener_restaurantes_cercanos(
         restaurantes.append(restaurante)
 
     return restaurantes
+
+# AGGREGATION
+@router.get("/reportes/top-ingresos")
+async def top_restaurantes_ingresos(limite: int = 10):
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$restauranteId",
+                "totalIngresos": { "$sum": "$total" },
+                "totalOrdenes": { "$sum": 1 }
+            }
+        },
+        { "$sort": { "totalIngresos": -1 } },
+        { "$limit": limite },
+        {
+            "$lookup": {
+                "from": "restaurantes",
+                "localField": "_id",
+                "foreignField": "_id",
+                "as": "restaurante"
+            }
+        },
+        { "$unwind": "$restaurante" },
+        {
+            "$project": {
+                "_id": 0,
+                "restauranteId": {"$toString": "$_id"},
+                "restaurante": "$restaurante.nombre",
+                "totalIngresos": 1,
+                "totalOrdenes": 1
+            }
+        }
+    ]
+
+    cursor = db["ordenes"].aggregate(pipeline)
+    return await cursor.to_list(length=limite)
+
+
+#traer las reseñas del restaruante (por id)
+@router.get("/{id}/resenas")
+async def obtener_resenas_restaurante(id: str):
+
+    validar_object_id(id)
+
+    restaurante = await coleccion.find_one({"_id": ObjectId(id)})
+    if not restaurante:
+        raise HTTPException(status_code=404, detail="Restaurante no encontrado")
+
+    resenas = []
+    cursor = db["resenas"].find(
+        {"restauranteId": ObjectId(id)}
+    ).sort("calificacion", -1)
+
+    async for r in cursor:
+        resenas.append({
+            "id": str(r["_id"]),
+            "usuarioId": str(r["usuarioId"]),
+            "calificacion": r["calificacion"],
+            "comentario": r.get("comentario"),
+            "fecha": r["fecha"]
+        })
+
+    return resenas
+
+
+@router.get("/categorias/distintas")
+async def categorias_distintas():
+
+    categorias = await coleccion.distinct("categoria")
+
+    return {
+        "categorias": categorias,
+        "total": len(categorias)
+    }
