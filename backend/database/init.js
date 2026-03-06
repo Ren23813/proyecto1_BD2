@@ -62,7 +62,7 @@ db.createCollection("restaurantes", {
 
 db.restaurantes.createIndex({ ubicacion: "2dsphere" })
 db.restaurantes.createIndex({ nombre: "text", descripcion: "text" })
-
+db.restaurantes.createIndex({ categoria: 1 })
 
 db.createCollection("articulosMenu", {
   validator: {
