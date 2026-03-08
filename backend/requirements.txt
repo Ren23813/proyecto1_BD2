@@ -4,3 +4,4 @@ motor
 pydantic[email] 
 dnspython
 faker
+python-multipart
