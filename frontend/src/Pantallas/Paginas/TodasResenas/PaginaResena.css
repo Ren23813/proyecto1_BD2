@@ -1,0 +1,476 @@
+
+:root {
+  --azul-oscuro:  #324f5c;
+  --azul-medio:   #435d69;
+  --azul-boton:   #4b6f80;
+  --rojo-acento:  #a30000;
+  --rojo-hover:   #c0392b;
+  --crema:        #fdfcf0;
+  --gris-claro:   #f0f2f4;
+  --borde:        #d4dce1;
+  --texto:        #2c3e50;
+  --texto-suave:  #6b7f8a;
+}
+
+/* ── Base ──────────────────────────────────────── */
+.resenas-page {
+  padding: 40px 48px;
+  background-color: var(--crema);
+  min-height: 100vh;
+  color: var(--texto);
+  position: relative;
+}
+
+/* ── Toast ─────────────────────────────────────── */
+.toast-resenas {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  background: var(--azul-oscuro);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 6px 24px rgba(50,79,92,0.25);
+  animation: slideUp 0.3s ease;
+}
+
+.toast-resenas.toast-error {
+  background: var(--rojo-acento);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ────────────────────────────────────── */
+.resenas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 3px solid var(--azul-boton);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.resenas-titulo-bloque h1 {
+  font-size: 2.2rem;
+  color: var(--azul-oscuro);
+  margin: 0 0 4px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.resenas-subtitulo {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.resenas-subtitulo strong { color: var(--azul-oscuro); }
+
+/* ── Botón peligro ─────────────────────────────── */
+.btn-peligro {
+  padding: 10px 20px;
+  background: #fff0f0;
+  color: var(--rojo-acento);
+  border: 1.5px solid #f5c6c6;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-peligro:hover {
+  background: #ffe0e0;
+  border-color: var(--rojo-acento);
+}
+
+/* ── Barra de filtros ──────────────────────────── */
+.resenas-filtros {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1.5px solid var(--borde);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 10px rgba(67,93,105,0.07);
+}
+
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filtro-grupo label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--azul-medio);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.filtro-grupo select {
+  padding: 9px 14px;
+  border: 1.5px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: var(--crema);
+  cursor: pointer;
+  min-width: 180px;
+  transition: border-color 0.2s;
+}
+
+.filtro-grupo select:focus {
+  outline: none;
+  border-color: var(--azul-boton);
+}
+
+.btn-reset-filtros {
+  padding: 9px 16px;
+  background: var(--gris-claro);
+  color: var(--azul-medio);
+  border: 1.5px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-end;
+}
+
+.btn-reset-filtros:hover { background: var(--borde); }
+
+/* ── Status ────────────────────────────────────── */
+.resenas-status {
+  text-align: center;
+  padding: 60px;
+  color: var(--texto-suave);
+  font-size: 1rem;
+}
+
+/* ── Grid de reseñas ───────────────────────────── */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card ──────────────────────────────────────── */
+.resena-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  border: 1.5px solid var(--borde);
+  box-shadow: 0 3px 12px rgba(67,93,105,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeCard 0.35s ease both;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resena-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(67,93,105,0.12);
+}
+
+/* Acento de color lateral según calificación */
+.resena-card.calificacion-5 { border-left: 4px solid #27ae60; }
+.resena-card.calificacion-4 { border-left: 4px solid #2ecc71; }
+.resena-card.calificacion-3 { border-left: 4px solid #f39c12; }
+.resena-card.calificacion-2 { border-left: 4px solid #e67e22; }
+.resena-card.calificacion-1 { border-left: 4px solid var(--rojo-acento); }
+
+@keyframes fadeCard {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabecera de la card */
+.resena-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resena-estrellas-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.estrella { font-size: 1.1rem; }
+.estrella.on  { color: #f0a500; }
+.estrella.off { color: #ddd; }
+
+.resena-num-cal {
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.resena-sede-badge {
+  background: #eef2f5;
+  color: var(--azul-medio);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Comentario */
+.resena-comentario {
+  font-size: 0.9rem;
+  color: var(--texto);
+  line-height: 1.55;
+  font-style: italic;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.sin-comentario {
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+/* Footer de la card */
+.resena-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gris-claro);
+  padding-top: 10px;
+}
+
+.resena-fecha {
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}
+
+.resena-usuario-id {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  font-family: monospace;
+  background: var(--gris-claro);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Acciones admin dentro de la card */
+.resena-admin-actions {
+  display: flex;
+  gap: 8px;
+  border-top: 1px dashed var(--borde);
+  padding-top: 10px;
+}
+
+.btn-edit-resena {
+  flex: 1;
+  padding: 7px 0;
+  background: var(--gris-claro);
+  border: 1px solid var(--borde);
+  color: var(--azul-oscuro);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-edit-resena:hover { background: var(--borde); }
+
+.btn-delete-resena {
+  flex: 1;
+  padding: 7px 0;
+  background: #fff4f4;
+  border: 1px solid #f5c6c6;
+  color: var(--rojo-acento);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete-resena:hover { background: #ffe0e0; }
+
+/* ── Modales ───────────────────────────────────── */
+.modal-overlay-resenas {
+  position: fixed;
+  inset: 0;
+  background: rgba(50,79,92,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.modal-resenas {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 460px;
+  max-width: 95vw;
+  box-shadow: 0 16px 48px rgba(50,79,92,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: slideUp 0.25s ease;
+}
+
+.modal-resenas h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--azul-oscuro);
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gris-claro);
+}
+
+.field-resena {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-resena label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--azul-medio);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field-resena textarea {
+  padding: 10px 12px;
+  border: 1.5px solid var(--borde);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: #fafafa;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s;
+}
+
+.field-resena textarea:focus {
+  outline: none;
+  border-color: var(--azul-boton);
+}
+
+.field-resena select {
+  padding: 10px 14px;
+  border: 1.5px solid var(--borde);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: #fafafa;
+}
+
+/* Selector de estrellas interactivo */
+.estrellas-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.estrella-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.1s;
+  padding: 0;
+  line-height: 1;
+}
+
+.estrella-btn.activa { color: #f0a500; }
+.estrella-btn:hover  { transform: scale(1.2); }
+
+.cal-label {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+/* Advertencia modal peligro */
+.modal-peligro h3 { color: var(--rojo-acento); }
+
+.advertencia-texto {
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: #fff8f8;
+  border: 1px solid #f5c6c6;
+  border-radius: 9px;
+  padding: 12px 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.confirmacion-sede {
+  background: #fff0e0;
+  border: 1px solid #f5d6b0;
+  border-radius: 9px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: #7a4f00;
+}
+
+/* Botones del modal */
+.modal-resenas-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 4px;
+  border-top: 1px solid var(--gris-claro);
+}
+
+.modal-resenas-buttons button {
+  padding: 10px 22px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.modal-resenas-buttons button:first-child {
+  background: var(--gris-claro);
+  color: var(--texto-suave);
+}
+
+.modal-resenas-buttons button:first-child:hover { background: var(--borde); }
+
+.btn-confirmar-resena {
+  background: var(--azul-boton);
+  color: #fff;
+}
+
+.btn-confirmar-resena:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.btn-peligro-confirmar {
+  background: var(--rojo-acento);
+  color: #fff;
+}
+
+.btn-peligro-confirmar:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-peligro-confirmar:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }

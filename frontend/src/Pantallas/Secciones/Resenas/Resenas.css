@@ -131,6 +131,22 @@
   display: block;
 }
 
+.inicio-boton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4b6f80;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.inicio-boton:hover {
+  background-color: #a30000;
+}
+
 /* Esto asegura que cambie visualmente cuando se habilita */
 .inicio-boton {
   background-color: #8b0000; /* Tu color rojo original */

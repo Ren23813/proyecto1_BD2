@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Resenas.css";
+import { useNavigate } from "react-router";
 
 export const Resenas = () => {
+    const navigate = useNavigate();
+    
   const [resenas, setResenas] = useState([]);
   const [restaurantes, setRestaurantes] = useState([]);
   const [nitBusqueda, setNitBusqueda] = useState("");
@@ -104,6 +107,11 @@ export const Resenas = () => {
           </div>
         ))}
       </div>
+
+      <button className="inicio-boton"
+      onClick={() => navigate("/resena-completas")} >
+          Ver más reseñas
+        </button>
 
       <div className="nueva-resena-form">
         <div className="resena-card-dashed">

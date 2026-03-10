@@ -47,12 +47,12 @@ export const Navbar = () => {
         <button className="nav-link-btn" onClick={() => handleScrollTo("sucursales")}>Sucursales</button>
         <button className="nav-link-btn" onClick={() => handleScrollTo("menu")}>Menú</button>
         <button className="nav-link-btn" onClick={() => handleScrollTo("resenas")}>Reseñas</button>
-        <button className="nav-link-btn" onClick={() => navigate("/pedidos")}>Pedidos</button>
+        <button className="nav-link-btn" onClick={() => navigate("/pedidos")}>Ordenes</button>
 
         {isAdmin && (
           <>
-            <button className="nav-link-btn admin-link" onClick={() => navigate("/dashboard")}>
-              Dashboard 
+            <button className="nav-link-btn admin-link" onClick={() => navigate("/clientes")}>
+              Clientes
             </button>
             <button className="nav-link-btn admin-link" onClick={() => navigate("/inventario")}>
               Inventario

@@ -14,6 +14,10 @@ import { PedidosHome } from './Pantallas/Paginas/PedidosHome/PedidosHome'
 import { Resenas } from './Pantallas/Secciones/Resenas/Resenas'
 import { Dashboard } from './Pantallas/Secciones/dashboard/Dashboard'
 import { AdminProvider } from './AdminContext'
+import { PaginaResenas } from './Pantallas/Paginas/TodasResenas/PaginaResena'
+import { Usuarios } from './Pantallas/Paginas/Usuarios/Usuarios'
+import { Ingredientes } from './Pantallas/Paginas/Ingredientes/Ingredientes'
+import { RegistroOrdenes } from './Pantallas/Paginas/RegistroOrdenes/RegistroOrdenes'
 
 // Componente para agrupar la página principal
 const LandingPage = () => (
@@ -42,6 +46,14 @@ function App() {
             <Route path='/carta-completa' element={<CartaCompleta></CartaCompleta>} />
             <Route path="/pedidos/nuevo" element={<NuevoPedido></NuevoPedido>}/>
             <Route path="/pedidos" element={<PedidosHome></PedidosHome>}/>
+            <Route path="/pedidos/rastrear" element={<RegistroOrdenes></RegistroOrdenes>}/>
+            
+            <Route path="/resena-completas" element={<PaginaResenas></PaginaResenas>}/>
+            <Route path="/clientes" element={<Usuarios></Usuarios>}/>
+            <Route path="/inventario" element={<Ingredientes></Ingredientes>}/>
+
+
+            
           </Routes>
         </main>
       </Router>
