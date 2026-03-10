@@ -1,9 +1,11 @@
 from fastapi import APIRouter, HTTPException, UploadFile, File
-from app.db import db
+from fastapi.responses import StreamingResponse
+from app.db import db, fs
 from bson import ObjectId
 from datetime import datetime
 from pydantic import BaseModel
 from typing import List, Optional
+from io import BytesIO
 
 router = APIRouter(prefix="/ordenes", tags=["Órdenes"])
 
@@ -214,6 +216,18 @@ async def obtener_orden(id: str):
 
     return orden_serializer(orden)
 
+@router.put("/completar-pendientes")
+async def completar_ordenes_pendientes():
+
+    resultado = await coleccion.update_many(
+        {"estado": "Pendiente"},
+        {"$set": {"estado": "Completada"}}
+    )
+
+    return {
+        "mensaje": "Órdenes actualizadas correctamente",
+        "modificadas": resultado.modified_count
+    }
 
 # UPDATE
 @router.put("/{id}")
@@ -281,42 +295,38 @@ async def ventas_por_mes():
         
     return reporte
 
-@router.put("/completar-pendientes")
-async def completar_ordenes_pendientes():
-
-    resultado = await coleccion.update_many(
-        {"estado": "Pendiente"},
-        {"$set": {"estado": "Completada"}}
-    )
-
-    return {
-        "mensaje": "Órdenes actualizadas correctamente",
-        "modificadas": resultado.modified_count
-    }
 
 
 #GRIDFS
 @router.post("/subir-reporte")
-async def subir_archivo(file: UploadFile = File(...)):
-
+async def subir_reporte(file: UploadFile = File(...)):
     contenido = await file.read()
 
-    file_id = await db.fs.upload_from_stream(
+    file_id = await fs.upload_from_stream(
         file.filename,
-        contenido
+        contenido,
+        metadata={"content_type": file.content_type}
     )
 
-    return {"file_id": str(file_id)}
-
+    return {"file_id": str(file_id), "nombre": file.filename}
 
 #Gridfs
 @router.get("/archivo/{file_id}")
 async def descargar_archivo(file_id: str):
-
     if not ObjectId.is_valid(file_id):
         raise HTTPException(400, "ID inválido")
 
-    stream = await db.fs.open_download_stream(ObjectId(file_id))
-    contenido = await stream.read()
+    try:
+        grid_out = await fs.open_download_stream(ObjectId(file_id))
+    except Exception:
+        raise HTTPException(status_code=404, detail="Archivo no encontrado")
 
-    return contenido
+    async def iterar():
+        while chunk := await grid_out.readchunk():
+            yield chunk
+
+    return StreamingResponse(
+        iterar(),
+        media_type=grid_out.metadata.get("content_type", "application/octet-stream"),
+        headers={"Content-Disposition": f"attachment; filename={grid_out.filename}"}
+    )
