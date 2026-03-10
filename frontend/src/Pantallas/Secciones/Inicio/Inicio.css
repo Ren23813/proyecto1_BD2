@@ -1,27 +1,35 @@
 
-
-
-
-
-
 .inicio {
-  min-height: calc(100%);
-  width: calc(100% - 80px);
+  height: 100%;
+  width: 96%;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  margin: 0;
-  /* background-color: #fdfaf6; */
+    
+}
+
+.inicio1 {
+  min-height: calc(100%);
+  width: calc(90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+
+  background-color: #faf5ef; 
+  
+
 }
 
 .inicio-contenido {
+  padding: 15px;
   display: flex;
-  max-width: 1200px;
   width: 100%;
   gap: 60px;
   align-items: center;
   justify-content: space-between;
+  border: 3px dashed #9cb4b7;
 }
 
 /* 📝 Texto */
@@ -32,7 +40,7 @@
 .inicio-texto h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #2c2c2c;
+  color: #324f5c;
 }
 
 .inicio-texto p {
@@ -46,7 +54,7 @@
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #8b0000;
+  background-color: #4b6f80;
   color: white;
   border: none;
   cursor: pointer;

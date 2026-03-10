@@ -2,7 +2,8 @@ import "./SucursalCard.css";
 
 export const SucursalCard = ({ nombre, ciudad, pais, descripcion, imagen }) => {
   return (
-    <div className="sucursal-card">
+    <div className="sucursal-card1">
+      <div className="sucursal-card">
       <div className="sucursal-imagen">
         <img src={imagen} alt={nombre} />
       </div>
@@ -12,6 +13,7 @@ export const SucursalCard = ({ nombre, ciudad, pais, descripcion, imagen }) => {
         <h4>{ciudad}, {pais}</h4>
         <p>{descripcion}</p>
       </div>
+    </div>
     </div>
   );
 };

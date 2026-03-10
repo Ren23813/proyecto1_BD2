@@ -6,11 +6,12 @@
 }
 
 .fondoa {
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0px;
-  padding: 0px;
+  
+  
   background-color: #f8f8f8;
 
   background-image:

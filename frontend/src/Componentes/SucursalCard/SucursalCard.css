@@ -1,9 +1,30 @@
-.sucursal-card {
+.sucursal-card1{
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  padding: 15px;
+  gap: 0px;
+  border-radius: 15px;
   align-items: center;
 
   width: 100%;
+  color: #324f5c;
+
+  background-color: #faf5ef; 
+
+}
+
+.sucursal-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 5px;
+  border-radius: 10px;
+  align-items: center;
+
+  width: 100%;
+  color: #324f5c;
+  border: 3px dashed #9cb4b7;
+  
 }
 
 .sucursal-imagen img {
@@ -19,8 +40,8 @@
 }
 
 .sucursal-info h4 {
-  margin: 5px 0 15px 0;
-  color: #8b0000;
+  margin: 0px 0 0px 0;
+  color: #324f5c;
 }
 
 .sucursal-info p {

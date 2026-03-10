@@ -1,53 +1,86 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./Menu.css";
 import { MenuItem } from "../../../Componentes/MenuItem/MenuItem";
 
+const generarSemillaMenu = (id) => {
+  if (!id) return 1;
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = id.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return Math.abs(hash);
+};
+
 export const Menu = () => {
-
-  const menuData = [
-    { id: 1, nombre: "Pizza Margherita", descripcion: "Clásica italiana.", imagen: "https://picsum.photos/400?random=1" },
-    { id: 2, nombre: "Carbonara", descripcion: "Pasta cremosa romana.", imagen: "https://picsum.photos/400?random=2" },
-    { id: 3, nombre: "Lasagna", descripcion: "Tradicional boloñesa.", imagen: "https://picsum.photos/400?random=3" },
-    { id: 4, nombre: "Risotto", descripcion: "Cremoso y elegante.", imagen: "https://picsum.photos/400?random=4" },
-    { id: 5, nombre: "Tiramisú", descripcion: "Postre clásico.", imagen: "https://picsum.photos/400?random=5" },
-    { id: 6, nombre: "Bruschetta", descripcion: "Entrada italiana.", imagen: "https://picsum.photos/400?random=6" },
-    { id: 7, nombre: "Focaccia", descripcion: "Pan artesanal.", imagen: "https://picsum.photos/400?random=7" },
-    { id: 8, nombre: "Gnocchi", descripcion: "Suaves y caseros.", imagen: "https://picsum.photos/400?random=8" },
-    { id: 9, nombre: "Ravioli", descripcion: "Rellenos frescos.", imagen: "https://picsum.photos/400?random=9" },
-    { id: 10, nombre: "Panna Cotta", descripcion: "Postre delicado.", imagen: "https://picsum.photos/400?random=10" },
-    { id: 11, nombre: "Calzone", descripcion: "Pizza cerrada.", imagen: "https://picsum.photos/400?random=11" },
-    { id: 12, nombre: "Caprese", descripcion: "Tomate y mozzarella.", imagen: "https://picsum.photos/400?random=12" }
-  ];
-
-  const itemsPorPagina = 6;
+  const [menuData, setMenuData] = useState([]);
   const [paginaActual, setPaginaActual] = useState(0);
+  const itemsPorPagina = 6;
+  const navigate = useNavigate();
+
+  // 1. Cargar datos desde tu API de FastAPI
+  useEffect(() => {
+    const fetchMenu = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/articulosMenu/");
+        const data = await response.json();
+        // Solo mostrar los que están disponibles
+        setMenuData(data.filter(item => item.disponible));
+      } catch (error) {
+        console.error("Error cargando el menú:", error);
+      }
+    };
+    fetchMenu();
+  }, []);
 
   const totalPaginas = Math.ceil(menuData.length / itemsPorPagina);
 
+  // 2. Efecto para el carrusel automático
   useEffect(() => {
+    if (totalPaginas <= 1) return;
+
     const intervalo = setInterval(() => {
-      setPaginaActual((prev) =>
-        prev === totalPaginas - 1 ? 0 : prev + 1
-      );
-    }, 3000); // 3 segundos
+      setPaginaActual((prev) => (prev === totalPaginas - 1 ? 0 : prev + 1));
+    }, 4000); // 4 segundos para que dé tiempo a leer
 
     return () => clearInterval(intervalo);
   }, [totalPaginas]);
 
   const inicio = paginaActual * itemsPorPagina;
-  const fin = inicio + itemsPorPagina;
-  const itemsVisibles = menuData.slice(inicio, fin);
+  const itemsVisibles = menuData.slice(inicio, inicio + itemsPorPagina);
 
   return (
     <section id="menu" className="menu-section">
-      <h1>Nuestro Menú</h1>
-      
+      <h1 className="section-title">Nuestro Menú</h1>
 
       <div className="menu-grid">
-        {itemsVisibles.map((item) => (
-          <MenuItem key={item.id} {...item} />
-        ))}
+        {itemsVisibles.length > 0 ? (
+          itemsVisibles.map((item) => {
+            const semilla = generarSemillaMenu(item.id);
+            return (
+              <MenuItem 
+                key={item.id} 
+                nombre={item.nombre}
+                descripcion={item.descripcion}
+                precio={item.precio}
+                /* Imagen aleatoria pero fija por ID de plato */
+                imagen={`https://loremflickr.com/400/400/food,pasta,pizza,italian/all?lock=${semilla}`}
+              />
+            );
+          })
+        ) : (
+          <p>Cargando delicias...</p>
+        )}
+      </div>
+
+      {/* Botón único para ver el menú completo */}
+      <div className="menu-footer">
+        <button 
+          className="inicio-boton" 
+          onClick={() => navigate("/carta-completa")}
+        >
+          Ver Menú Completo
+        </button>
       </div>
     </section>
   );

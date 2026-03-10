@@ -8,6 +8,7 @@ export const Inicio = () =>{
             
            
 <section id="inicio" className="inicio">
+  <section className="inicio1">
 
       <div className="inicio-contenido">
 
@@ -28,9 +29,10 @@ export const Inicio = () =>{
             transmitidas por generaciones. Cada plato cuenta una historia.
           </p>
 
-          <button className="inicio-boton">
+      <button className="inicio-boton">
             Descubrir Menú
           </button>
+          
         </div>
 
         {/* 🖼 Imagen */}
@@ -38,10 +40,14 @@ export const Inicio = () =>{
           <div className="imagen-placeholder">
             Imagen del Restaurante
           </div>
+          
         </div>
+        
 
       </div>
+      
 
+    </section>
     </section>
 
             

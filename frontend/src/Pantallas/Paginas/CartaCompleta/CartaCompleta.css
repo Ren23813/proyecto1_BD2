@@ -1,0 +1,84 @@
+.carta-container {
+  padding: 40px;
+  background-color: #fdfcf0; /* Tu color crema */
+  min-height: 100vh;
+}
+
+.carta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 20px;
+}
+
+.buscadores-group {
+  display: flex;
+  gap: 20px;
+}
+
+.buscador-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buscador-wrapper label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.input-busqueda {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+}
+
+/* Tabla */
+.tabla-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.tabla-platillos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-platillos th {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+
+.tabla-platillos td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.img-tabla {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e74c3c;
+}
+
+.badge-sede {
+  background: #eee;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+}
+
+.status-ok { color: #27ae60; font-weight: bold; }
+.status-no { color: #e74c3c; font-weight: bold; }
+.precio-text { font-weight: bold; color: #2c3e50; }
+.desc-text { max-width: 300px; font-size: 0.9rem; color: #666; }
