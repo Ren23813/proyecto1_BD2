@@ -85,12 +85,16 @@ async def crear_resena(data: ResenaCreate):
     nueva_resena = {
         "restauranteId": ObjectId(data.restauranteId),
         "usuarioId": ObjectId(data.usuarioId),
-        "ordenId": ObjectId(data.ordenId) if data.ordenId else None,
         "calificacion": data.calificacion,
         "comentario": data.comentario,
         "fecha": datetime.utcnow()
     }
 
+    # 2. SOLO si existe ordenId, agregamos la llave al diccionario
+    if data.ordenId and data.ordenId.strip():
+        nueva_resena["ordenId"] = ObjectId(data.ordenId)
+
+    # 3. Insertamos
     resultado = await coleccion.insert_one(nueva_resena)
     creada = await coleccion.find_one({"_id": resultado.inserted_id})
 

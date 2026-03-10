@@ -1,0 +1,153 @@
+.resenas-section {
+  padding: 50px 20px;
+  background-color: transparent;
+}
+
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 10px;
+  margin-bottom: 50px;
+}
+
+.resena-card-container {
+  background-color: #faf5ef;
+  height: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  color: #324f5c;
+}
+
+.resena-card-dashed {
+  border: 3px dashed #9cb4b7;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #324f5c;
+}
+
+.resena-stars {
+  color: #d4af37; /* Dorado */
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.resena-texto {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.nueva-resena-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #faf5ef;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #324f5c;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Color de texto para inputs */
+.input-dark {
+  color: #324f5c !important; /* Forzamos color oscuro */
+  background-color: #ffffff;
+  border: 1px solid #9cb4b7;
+  padding: 10px;
+}
+
+/* Estilo para el botón deshabilitado */
+
+
+/* Feedback de usuario encontrado */
+.user-found {
+  font-size: 0.85rem;
+  color: #2e8b57;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Asegurar que el select y textarea se vean bien */
+.nueva-resena-form select.input-dark,
+.nueva-resena-form textarea.input-dark {
+  color: #324f5c;
+}
+
+.nueva-resena-form textarea::placeholder {
+  color: #999;
+}
+
+.nueva-resena-form input, .nueva-resena-form select, .nueva-resena-form textarea {
+  padding: 10px;
+  border: 1px solid #9cb4b7;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.nueva-resena-form textarea {
+  width: 100%;
+  height: 100px;
+  margin: 15px 0;
+  resize: none;
+}
+
+.msg-success { color: #2e8b57; font-weight: bold; margin-top: 10px; }
+.msg-error { color: #8b0000; font-weight: bold; margin-top: 10px; }
+
+/* Forzar texto oscuro en todos los elementos de formulario */
+.input-dark, 
+.input-dark option, 
+.nueva-resena-form textarea.input-dark {
+  color: #1a1a1a !important; /* Un gris casi negro muy legible */
+  background-color: #ffffff;
+  border: 1px solid #9cb4b7;
+}
+
+.input-dark::placeholder {
+  color: #666;
+}
+
+.user-found {
+  color: #2e8b57;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Esto asegura que cambie visualmente cuando se habilita */
+.inicio-boton {
+  background-color: #8b0000; /* Tu color rojo original */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inicio-boton:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  cursor: not-allowed;
+  transform: none !important;
+  opacity: 0.7;
+}
+
+/* Para que el datalist/input se vea igual que los otros inputs */
+input[list].input-dark {
+  width: 100%;
+}

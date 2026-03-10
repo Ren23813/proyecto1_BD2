@@ -10,6 +10,21 @@
 
 }
 
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: white; /* O el color de tus links actuales */
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: opacity 0.2s;
+}
+
+.nav-link-btn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
 
 .navbar-top {
   display: flex;

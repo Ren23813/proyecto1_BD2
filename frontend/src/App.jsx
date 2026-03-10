@@ -9,6 +9,11 @@ import { Menu } from './Pantallas/Secciones/Menu/Menu'
 import { ExplorarSucursales } from './Pantallas/Paginas/MapaSucursal/ExplorarSucursales'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartaCompleta } from './Pantallas/Paginas/CartaCompleta/CartaCompleta'
+import { NuevoPedido } from './Pantallas/Paginas/NuevoPedido/NuevoPedido'
+import { PedidosHome } from './Pantallas/Paginas/PedidosHome/PedidosHome'
+import { Resenas } from './Pantallas/Secciones/Resenas/Resenas'
+import { Dashboard } from './Pantallas/Secciones/dashboard/Dashboard'
+import { AdminProvider } from './AdminContext'
 
 // Componente para agrupar la página principal
 const LandingPage = () => (
@@ -16,6 +21,8 @@ const LandingPage = () => (
     <Inicio />
     <Sucursales />
     <Menu />
+    <Resenas></Resenas>
+    
   </>
 );
 
@@ -24,16 +31,21 @@ function App() {
 
   return (
     <>
+      <AdminProvider>
       <Router>
         <main className="fondoa">
           <Navbar />
           <Routes>
+            
             <Route path="/" element={<LandingPage />} />
             <Route path="/explorar" element={<ExplorarSucursales />} />
             <Route path='/carta-completa' element={<CartaCompleta></CartaCompleta>} />
+            <Route path="/pedidos/nuevo" element={<NuevoPedido></NuevoPedido>}/>
+            <Route path="/pedidos" element={<PedidosHome></PedidosHome>}/>
           </Routes>
         </main>
       </Router>
+      </AdminProvider>
     </>
   )
 }

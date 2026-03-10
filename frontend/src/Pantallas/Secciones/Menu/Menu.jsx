@@ -15,7 +15,7 @@ const generarSemillaMenu = (id) => {
 export const Menu = () => {
   const [menuData, setMenuData] = useState([]);
   const [paginaActual, setPaginaActual] = useState(0);
-  const itemsPorPagina = 6;
+  const itemsPorPagina = 8;
   const navigate = useNavigate();
 
   // 1. Cargar datos desde tu API de FastAPI
@@ -41,7 +41,7 @@ export const Menu = () => {
 
     const intervalo = setInterval(() => {
       setPaginaActual((prev) => (prev === totalPaginas - 1 ? 0 : prev + 1));
-    }, 4000); // 4 segundos para que dé tiempo a leer
+    }, 6000); // 4 segundos para que dé tiempo a leer
 
     return () => clearInterval(intervalo);
   }, [totalPaginas]);
@@ -64,7 +64,7 @@ export const Menu = () => {
                 descripcion={item.descripcion}
                 precio={item.precio}
                 /* Imagen aleatoria pero fija por ID de plato */
-                imagen={`https://loremflickr.com/400/400/food,pasta,pizza,italian/all?lock=${semilla}`}
+                imagen={item.imagen || "https://via.placeholder.com/400x250?text=Platillo"}
               />
             );
           })
