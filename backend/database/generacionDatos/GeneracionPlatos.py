@@ -6,10 +6,44 @@ from pymongo import MongoClient
 
 MONGO_URI = "usuario"
 DB_NAME = "Proyecto1"
+COLLECTION_NAME = "articulosMenu"
 
 #generación de dato para el menú
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
+coleccion = db[COLLECTION_NAME]
+
+
+################33 IMAGENES
+# Diccionario de URLs 
+IMAGENES_REALES = {
+    "Bruschetta": "https://images.unsplash.com/photo-1572695157360-1153aaad020b?q=80&w=500",
+    "Caprese": "https://images.unsplash.com/photo-1760023570385-ee484f7076b3?q=80&w=500",
+    "Spaghetti Carbonara": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=500",
+    "Lasagna": "https://images.unsplash.com/photo-1709429790175-b02bb1b19207?q=80&w=500",
+    "Pizza Margherita": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=500",
+    "Pizza Pepperoni": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=500",
+    "Pollo Parmigiana": "https://images.unsplash.com/photo-1641898378548-ac93da99786a?q=80&w=500",
+    "Tiramisu": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=500",
+    "Gelato": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=500"
+}
+# def actualizar_imagenes_en_atlas():
+#     print("Iniciando actualización de imágenes...")
+#     contador = 0
+
+#     for nombre_plato, url_real in IMAGENES_REALES.items():
+#         # Actualizamos todos los documentos que coincidan con el nombre
+#         # sin importar a qué restaurante pertenezcan
+#         resultado = coleccion.update_many(
+#             {"nombre": nombre_plato}, 
+#             {"$set": {"imagen": url_real}}
+#         )
+#         print(f"Actualizado: {nombre_plato} ({resultado.modified_count} documentos)")
+#         contador += resultado.modified_count
+
+#     print(f"\n¡Listo! Se actualizaron {contador} platos en total.")
+
+# ################33 IMAGENES
 
 
 # MENÚ BASE 
@@ -113,7 +147,7 @@ def generar_menu_restaurante(restaurante_id):
             "ingredientes": [{"nombre": ing} for ing in plato_mod["ingredientes"]],
             "disponible": True,
             "fechaCreacion": datetime.utcnow().isoformat(),
-            "imagen": plato_mod["nombre"].lower().replace(" ", "_") + ".jpg"
+            "imagen": IMAGENES_REALES.get(plato_mod["nombre"], "default.jpg")
         }
 
         menu.append(item)
@@ -143,3 +177,5 @@ def generar_articulos_json(output="articulos_menu.json"):
 
 
 generar_articulos_json()
+
+# actualizar_imagenes_en_atlas()
