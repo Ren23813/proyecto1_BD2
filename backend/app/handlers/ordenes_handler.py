@@ -56,7 +56,7 @@ def validar_object_id(id: str):
     
 
 # CREATE
-@router.post("/")
+@router.post("", status_code=201)
 async def crear_orden(data: OrdenCreate):
     validar_object_id(data.usuarioId)
     validar_object_id(data.restauranteId)
@@ -121,13 +121,22 @@ async def crear_orden(data: OrdenCreate):
                     })
 
                     # descontar de inventario
+                    # ... dentro del for item in data.items:
+                   
                     for ing in articulo.get("ingredientes", []):
+                        # Usamos .get() para evitar el error si la llave no existe
+                        id_ing = ing.get("ingredienteId")
+                        cant_ingrediente = ing.get("cantidad", 0)
 
-                        cantidad_necesaria = ing["cantidad"] * item.cantidad
+                        if not id_ing:
+                            print(f"Alerta: El artículo {articulo['nombre']} tiene un ingrediente sin ID definido.")
+                            continue # Saltamos este ingrediente para que no rompa la transacción
+
+                        cantidad_necesaria = cant_ingrediente * item.cantidad
 
                         resultado = await db["ingredientes"].update_one(
                             {
-                                "_id": ObjectId(ing["ingredienteId"]),
+                                "_id": ObjectId(id_ing), # Aquí ya no fallará por 'ingredienteId'
                                 "restauranteId": ObjectId(data.restauranteId),
                                 "cantidadDisponible": {"$gte": cantidad_necesaria}
                             },
@@ -138,7 +147,7 @@ async def crear_orden(data: OrdenCreate):
                             },
                             session=session
                         )
-
+                        # ... resto del código (if resultado.modified_count == 0, etc.)
                         if resultado.modified_count == 0:
                             raise HTTPException(
                                 status_code=400,
@@ -173,7 +182,8 @@ async def crear_orden(data: OrdenCreate):
         except HTTPException:
             raise  
         except Exception as e:
-            raise HTTPException(status_code=500, detail="Error interno al crear la orden")
+            print(f"DEBUG ERROR: {str(e)}") # Esto imprimirá el error real en tu terminal
+            raise HTTPException(status_code=500, detail=f"Error interno: {str(e)}")
 
 
 # READ all

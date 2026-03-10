@@ -1,0 +1,368 @@
+/* ── Base ─────────────────────────────────────── */
+.carta-container {
+  padding: 40px;
+  background-color: #fdfcf0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ── Toast ────────────────────────────────────── */
+.toast-notificacion {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ───────────────────────────────────── */
+.carta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.carta-titulo {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.buscadores-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buscador-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buscador-wrapper label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input-busqueda {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  width: 220px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.input-busqueda:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+/* ── Tabla ────────────────────────────────────── */
+.tabla-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.tabla-platillos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-platillos thead tr {
+  background-color: #2c3e50;
+}
+
+.tabla-platillos th {
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tabla-platillos tbody tr {
+  transition: background 0.15s;
+}
+
+.tabla-platillos tbody tr:hover {
+  background-color: #fdf6f6;
+}
+
+.tabla-platillos td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  color: #2c3e50;          /* ← texto oscuro, legible */
+  font-size: 0.92rem;
+}
+
+/* Fila de platillo inactivo */
+.fila-inactiva td {
+  opacity: 0.5;
+}
+
+/* ── Celda imagen ─────────────────────────────── */
+.img-tabla {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2.5px solid #e74c3c;
+  display: block;
+}
+
+/* ── Badges ───────────────────────────────────── */
+.badge-sede {
+  background: #eef2f7;
+  color: #2c3e50;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-categoria {
+  background: #fff4f4;
+  color: #c0392b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #fad0cc;
+}
+
+/* ── Estados ──────────────────────────────────── */
+.status-ok  { color: #27ae60; font-weight: 700; font-size: 0.85rem; }
+.status-no  { color: #e74c3c; font-weight: 700; font-size: 0.85rem; }
+
+/* ── Precio y descripción ─────────────────────── */
+.precio-text {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.bold { font-weight: 700; color: #2c3e50; }
+
+.desc-text {
+  max-width: 260px;
+  font-size: 0.87rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ── Sin resultados ───────────────────────────── */
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* ── Admin actions en tabla ───────────────────── */
+.admin-actions-carta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-edit-carta {
+  background: #eef2f7;
+  border: 1px solid #dce3ed;
+  color: #2c3e50;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-edit-carta:hover { background: #dce3ed; }
+
+.btn-delete-carta {
+  background: #fff4f4;
+  border: 1px solid #fad0cc;
+  color: #e74c3c;
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete-carta:hover { background: #fde0dd; }
+
+/* ── Modal overlay ────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Modal carta (editar platillo) ───────────── */
+.modal-carta {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 520px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.modal-carta h3 {
+  margin: 0 0 24px;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 14px;
+}
+
+.modal-carta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-group.full-width { grid-column: 1 / -1; }
+
+.field-group label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.field-group input,
+.field-group textarea {
+  padding: 9px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  background: #fafafa;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+  background: #fff;
+}
+
+.field-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Preview imagen en modal */
+.imagen-preview img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+/* Toggle disponible */
+.disponible-toggle {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.disponible-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #2c3e50;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.disponible-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #e74c3c;
+}
+
+/* ── Botones del modal ────────────────────────── */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modal-buttons button {
+  padding: 10px 22px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.modal-buttons button:first-child {
+  background: #f0f0f0;
+  color: #555;
+}
+
+.modal-buttons button:first-child:hover { background: #e0e0e0; }
+
+.btn-confirmar {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-confirmar:hover { opacity: 0.88; transform: translateY(-1px); }
