@@ -1,111 +1,176 @@
-import { useState, useEffect } from "react";
+// RegistroOrdenes.jsx
+import { useState, useEffect, useCallback, useRef } from "react";
 import "./RegistroOrdenes.css";
 import { useAdmin } from "../../../AdminContext";
 
 const ESTADOS = ["Pendiente", "En Preparación", "En Camino", "Completada", "Cancelada"];
 
 const ESTADO_COLOR = {
-  "Pendiente":       "estado-pendiente",
-  "En Preparación":  "estado-preparacion",
-  "En Camino":       "estado-camino",
-  "Completada":      "estado-completada",
-  "Cancelada":       "estado-cancelada",
+  "Pendiente":      "estado-pendiente",
+  "En Preparación": "estado-preparacion",
+  "En Camino":      "estado-camino",
+  "Completada":     "estado-completada",
+  "Cancelada":      "estado-cancelada",
 };
+
+const POR_PAGINA = 10;
+
+function useDebounce(value, delay = 400) {
+  const [debounced, setDebounced] = useState(value);
+  useEffect(() => {
+    const t = setTimeout(() => setDebounced(value), delay);
+    return () => clearTimeout(t);
+  }, [value, delay]);
+  return debounced;
+}
 
 export const RegistroOrdenes = () => {
   const { isAdmin } = useAdmin();
 
-  // Datos
+  // Órdenes (paginadas)
   const [ordenes, setOrdenes] = useState([]);
-  const [restaurantes, setRestaurantes] = useState([]);
-  const [usuarios, setUsuarios] = useState([]);
+  const [totalOrdenes, setTotalOrdenes] = useState(0);
   const [loading, setLoading] = useState(false);
   const [mensaje, setMensaje] = useState(null);
   const [mensajeTipo, setMensajeTipo] = useState("ok");
 
+  // Lookups — cargados una sola vez, guardados como Map para O(1)
+  const [restaurantesMap, setRestaurantesMap] = useState(new Map());
+  const [restaurantesLista, setRestaurantesLista] = useState([]);
+  const [usuariosMap, setUsuariosMap] = useState(new Map());
+
   // Vista usuario: búsqueda por NIT
   const [nitBusqueda, setNitBusqueda] = useState("");
-  const [nitConfirmado, setNitConfirmado] = useState("");
   const [usuarioNit, setUsuarioNit] = useState(null);
+  const [ordenesNit, setOrdenesNit] = useState([]);
+  const [loadingNit, setLoadingNit] = useState(false);
 
   // Filtros admin
   const [filtroEstado, setFiltroEstado] = useState("");
   const [filtroRestaurante, setFiltroRestaurante] = useState("");
   const [busquedaId, setBusquedaId] = useState("");
+  const busquedaIdDebounced = useDebounce(busquedaId, 400);
 
   // Paginación
-  const [pagina, setPagina] = useState(0);
-  const POR_PAGINA = 10;
+  const [pagina, setPagina] = useState(1);
+  const totalPaginas = Math.max(1, Math.ceil(totalOrdenes / POR_PAGINA));
 
-  // Modal detalle
+  // Modales
   const [showDetalle, setShowDetalle] = useState(false);
   const [ordenDetalle, setOrdenDetalle] = useState(null);
   const [loadingDetalle, setLoadingDetalle] = useState(false);
 
-  // Modal editar (admin)
   const [showEditar, setShowEditar] = useState(false);
   const [editandoId, setEditandoId] = useState(null);
   const [formEditar, setFormEditar] = useState({ estado: "", metodoPago: "", tipoOrden: "" });
 
-  useEffect(() => { fetchTodo(); }, [pagina]);
-
-  useEffect(() => {
-    if (isAdmin) fetchTodo();
-  }, [filtroEstado, filtroRestaurante]);
-
+  // ── Toast ────────────────────────────────────────────────────────────────
   const showToast = (texto, tipo = "ok") => {
     setMensaje(texto); setMensajeTipo(tipo);
     setTimeout(() => setMensaje(null), 3500);
   };
 
-  const fetchTodo = async () => {
+  // ── Cargar lookups una sola vez ──────────────────────────────────────────
+  // Restaurantes y usuarios no cambian con los filtros de órdenes,
+  // así que los traemos una vez y los indexamos en un Map.
+  useEffect(() => {
+    const cargarLookups = async () => {
+      try {
+        const [rR, rU] = await Promise.all([
+          fetch("http://localhost:8000/restaurantes/"),
+          // Traemos todos los usuarios en una sola página grande solo para lookups de nombre
+          fetch("http://localhost:8000/usuarios/?page=1&page_size=200"),
+        ]);
+
+        const dataR = await rR.json();
+        const dataU = await rU.json();
+
+        // Restaurantes (respuesta plana)
+        const rLista = Array.isArray(dataR) ? dataR : (dataR.items ?? []);
+        setRestaurantesLista(rLista);
+        setRestaurantesMap(new Map(rLista.map(r => [r.id ?? r._id, r.nombre])));
+
+        // Usuarios (respuesta paginada o plana)
+        const uLista = Array.isArray(dataU) ? dataU : (dataU.items ?? []);
+        setUsuariosMap(new Map(uLista.map(u => [u.id, u])));
+      } catch {
+        showToast("Error cargando datos de referencia", "error");
+      }
+    };
+    cargarLookups();
+  }, []);
+
+  // ── Fetch órdenes paginado ───────────────────────────────────────────────
+  const fetchOrdenes = useCallback(async () => {
     setLoading(true);
     try {
-      const [rO, rR, rU] = await Promise.all([
-        fetch(`http://localhost:8000/ordenes/?skip=${pagina * POR_PAGINA}&limit=${POR_PAGINA}`),
-        fetch("http://localhost:8000/restaurantes/"),
-        fetch("http://localhost:8000/usuarios/")
-      ]);
-      setOrdenes(await rO.json());
-      setRestaurantes(await rR.json());
-      setUsuarios(await rU.json());
-    } catch { showToast("Error cargando órdenes", "error"); }
-    finally { setLoading(false); }
-  };
+      const params = new URLSearchParams({
+        skip: (pagina - 1) * POR_PAGINA,
+        limit: POR_PAGINA,
+      });
+      if (filtroEstado)          params.set("estado", filtroEstado);
+      if (filtroRestaurante)     params.set("restaurante_id", filtroRestaurante);
+      if (busquedaIdDebounced)   params.set("q", busquedaIdDebounced);
 
-  const getNombreRestaurante = (id) => {
-    const r = restaurantes.find(r => r.id === id || r._id === id);
-    return r ? r.nombre : "—";
-  };
+      const res = await fetch(`http://localhost:8000/ordenes/?${params}`);
+      const data = await res.json();
 
-  const getNombreUsuario = (id) => {
-    const u = usuarios.find(u => u.id === id);
-    return u ? u.nombre : id?.slice(-6) || "—";
-  };
+      if (Array.isArray(data)) {
+        // Fallback: back sin paginación todavía
+        setOrdenes(data);
+        setTotalOrdenes(data.length);
+      } else {
+        setOrdenes(data.items ?? []);
+        setTotalOrdenes(data.total ?? 0);
+      }
+    } catch {
+      showToast("Error cargando órdenes", "error");
+    } finally {
+      setLoading(false);
+    }
+  }, [pagina, filtroEstado, filtroRestaurante, busquedaIdDebounced]);
 
-  // ── Vista usuario: buscar por NIT ──────────────
-  const buscarPorNit = () => {
-    const u = usuarios.find(u => u.nit?.toString() === nitBusqueda);
-    if (u) {
+  useEffect(() => { fetchOrdenes(); }, [fetchOrdenes]);
+
+  // Volver a página 1 cuando cambia un filtro
+  useEffect(() => { setPagina(1); }, [filtroEstado, filtroRestaurante, busquedaIdDebounced]);
+
+  // ── Helpers lookup (O(1) con Map) ────────────────────────────────────────
+  const getNombreRestaurante = (id) => restaurantesMap.get(id) ?? "—";
+  const getNombreUsuario     = (id) => usuariosMap.get(id)?.nombre ?? id?.slice(-6) ?? "—";
+
+  // ── Vista usuario: buscar por NIT ────────────────────────────────────────
+  const buscarPorNit = async () => {
+    if (!nitBusqueda.trim()) return;
+    setLoadingNit(true);
+    setUsuarioNit(null);
+    setOrdenesNit([]);
+    try {
+      // Buscar usuario por NIT directamente en el back
+      const resU = await fetch(`http://localhost:8000/usuarios/?q=${nitBusqueda}&page_size=5`);
+      const dataU = await resU.json();
+      const lista = Array.isArray(dataU) ? dataU : (dataU.items ?? []);
+      const u = lista.find(u => u.nit?.toString() === nitBusqueda.trim());
+
+      if (!u) {
+        showToast("NIT no encontrado en el sistema", "error");
+        return;
+      }
+
       setUsuarioNit(u);
-      setNitConfirmado(nitBusqueda);
-    } else {
-      showToast("NIT no encontrado en el sistema", "error");
-      setUsuarioNit(null);
-      setNitConfirmado("");
+
+      // Traer órdenes de ese usuario
+      const resO = await fetch(`http://localhost:8000/ordenes/?usuario_id=${u.id}&limit=50`);
+      const dataO = await resO.json();
+      setOrdenesNit(Array.isArray(dataO) ? dataO : (dataO.items ?? []));
+    } catch {
+      showToast("Error buscando usuario", "error");
+    } finally {
+      setLoadingNit(false);
     }
   };
 
-  // Órdenes del usuario buscado (usuario)
-  const ordenesDelUsuario = ordenes.filter(o => o.usuarioId === usuarioNit?.id);
-
-  // Órdenes filtradas (admin)
-  const ordenesFiltradas = ordenes
-    .filter(o => filtroEstado === "" || o.estado === filtroEstado)
-    .filter(o => filtroRestaurante === "" || o.restauranteId === filtroRestaurante)
-    .filter(o => busquedaId === "" || o.id.includes(busquedaId));
-
-  // ── CRUD admin ─────────────────────────────────
+  // ── Acciones ─────────────────────────────────────────────────────────────
   const abrirDetalle = async (id) => {
     setShowDetalle(true);
     setLoadingDetalle(true);
@@ -129,7 +194,6 @@ export const RegistroOrdenes = () => {
     if (formEditar.estado)     body.estado = formEditar.estado;
     if (formEditar.metodoPago) body.metodoPago = formEditar.metodoPago;
     if (formEditar.tipoOrden)  body.tipoOrden = formEditar.tipoOrden;
-
     try {
       const res = await fetch(`http://localhost:8000/ordenes/${editandoId}`, {
         method: "PUT",
@@ -139,7 +203,7 @@ export const RegistroOrdenes = () => {
       if (res.ok) {
         showToast("✅ Orden actualizada");
         setShowEditar(false);
-        fetchTodo();
+        fetchOrdenes();
       } else showToast("Error al actualizar", "error");
     } catch { showToast("Error de conexión", "error"); }
   };
@@ -148,7 +212,7 @@ export const RegistroOrdenes = () => {
     if (!window.confirm("¿Cancelar esta orden?")) return;
     try {
       const res = await fetch(`http://localhost:8000/ordenes/${id}`, { method: "DELETE" });
-      if (res.ok) { showToast("🚫 Orden cancelada"); fetchTodo(); }
+      if (res.ok) { showToast("🚫 Orden cancelada"); fetchOrdenes(); }
       else showToast("Error al cancelar", "error");
     } catch { showToast("Error de conexión", "error"); }
   };
@@ -161,14 +225,14 @@ export const RegistroOrdenes = () => {
       const data = await res.json();
       if (res.ok) {
         showToast(`✅ ${data.modificadas} orden(es) completada(s)`);
-        fetchTodo();
+        fetchOrdenes();
       } else showToast("Error al completar", "error");
     } catch { showToast("Error de conexión", "error"); }
   };
 
   const pendientesCount = ordenes.filter(o => o.estado === "Pendiente").length;
 
-  // ── Tabla compartida ───────────────────────────
+  // ── Tabla compartida ──────────────────────────────────────────────────────
   const TablaOrdenes = ({ lista, modoUsuario = false }) => (
     <div className="ro-tabla-container">
       <table className="ro-tabla">
@@ -220,106 +284,99 @@ export const RegistroOrdenes = () => {
     </div>
   );
 
+  // ── Render ────────────────────────────────────────────────────────────────
   return (
     <div className="ro-page">
       {mensaje && (
         <div className={`ro-toast ${mensajeTipo === "error" ? "ro-toast-error" : ""}`}>{mensaje}</div>
       )}
 
-      {/* ── Header ── */}
+      {/* Header */}
       <div className="ro-header">
         <div className="ro-titulo-bloque">
           <h1>{isAdmin ? "Registro de Órdenes" : "Mis Pedidos"}</h1>
           <p className="ro-subtitulo">
             {isAdmin
-              ? `${ordenesFiltradas.length} orden(es) · ${pendientesCount} pendiente(s)`
+              ? `${totalOrdenes} orden(es) · ${pendientesCount} pendiente(s)`
               : "Consulta el estado de tus pedidos con tu NIT"}
           </p>
         </div>
-
-        {isAdmin && (
+        {isAdmin && pendientesCount > 0 && (
           <div className="ro-header-acciones">
-            {pendientesCount > 0 && (
-              <button className="ro-btn-completar" onClick={handleCompletarPendientes}>
-                ✅ Completar {pendientesCount} pendiente{pendientesCount !== 1 ? "s" : ""}
-              </button>
-            )}
+            <button className="ro-btn-completar" onClick={handleCompletarPendientes}>
+              ✅ Completar {pendientesCount} pendiente{pendientesCount !== 1 ? "s" : ""}
+            </button>
           </div>
         )}
       </div>
 
-      {/* ── Vista USUARIO: buscar por NIT ── */}
+      {/* Vista USUARIO */}
       {!isAdmin && (
         <div className="ro-nit-section">
           <div className="ro-nit-card">
             <h3>🔍 Consultar pedidos por NIT</h3>
             <div className="ro-nit-row">
               <input
-                type="number"
-                placeholder="Ingresa tu NIT..."
+                type="number" placeholder="Ingresa tu NIT..."
                 value={nitBusqueda}
                 onChange={e => setNitBusqueda(e.target.value)}
                 onKeyDown={e => e.key === "Enter" && buscarPorNit()}
                 className="ro-nit-input"
               />
-              <button className="ro-nit-btn" onClick={buscarPorNit}>Buscar</button>
+              <button className="ro-nit-btn" onClick={buscarPorNit} disabled={loadingNit}>
+                {loadingNit ? "Buscando..." : "Buscar"}
+              </button>
             </div>
-
             {usuarioNit && (
               <div className="ro-nit-encontrado">
-                ✅ <strong>{usuarioNit.nombre}</strong> — {ordenesDelUsuario.length} pedido(s)
+                ✅ <strong>{usuarioNit.nombre}</strong> — {ordenesNit.length} pedido(s)
               </div>
             )}
           </div>
-
           {usuarioNit && (
-            ordenesDelUsuario.length > 0
-              ? <TablaOrdenes lista={ordenesDelUsuario} modoUsuario />
+            ordenesNit.length > 0
+              ? <TablaOrdenes lista={ordenesNit} modoUsuario />
               : <p className="ro-status">Este cliente no tiene órdenes registradas.</p>
           )}
         </div>
       )}
 
-      {/* ── Vista ADMIN ── */}
+      {/* Vista ADMIN */}
       {isAdmin && (
         <>
           {/* Filtros */}
           <div className="ro-filtros">
             <div className="ro-filtro-grupo">
               <label>Estado</label>
-              <select value={filtroEstado} onChange={e => { setFiltroEstado(e.target.value); setPagina(0); }} className="ro-select">
+              <select value={filtroEstado} onChange={e => setFiltroEstado(e.target.value)} className="ro-select">
                 <option value="">Todos</option>
                 {ESTADOS.map(e => <option key={e} value={e}>{e}</option>)}
               </select>
             </div>
-
             <div className="ro-filtro-grupo">
               <label>Sede</label>
-              <select value={filtroRestaurante} onChange={e => { setFiltroRestaurante(e.target.value); setPagina(0); }} className="ro-select">
+              <select value={filtroRestaurante} onChange={e => setFiltroRestaurante(e.target.value)} className="ro-select">
                 <option value="">Todas</option>
-                {restaurantes.map(r => (
-                  <option key={r.id || r._id} value={r.id || r._id}>{r.nombre}</option>
+                {restaurantesLista.map(r => (
+                  <option key={r.id ?? r._id} value={r.id ?? r._id}>{r.nombre}</option>
                 ))}
               </select>
             </div>
-
             <div className="ro-filtro-grupo">
               <label>Buscar por ID</label>
               <input
-                type="text"
-                placeholder="últimos caracteres..."
+                type="text" placeholder="últimos caracteres..."
                 value={busquedaId}
                 onChange={e => setBusquedaId(e.target.value)}
                 className="ro-input-filtro"
               />
             </div>
-
             <button className="ro-btn-reset" onClick={() => {
-              setFiltroEstado(""); setFiltroRestaurante(""); setBusquedaId(""); setPagina(0);
+              setFiltroEstado(""); setFiltroRestaurante(""); setBusquedaId(""); setPagina(1);
             }}>↺ Limpiar</button>
           </div>
 
-          {/* Stats rápidas de estado */}
+          {/* Stats rápidas */}
           <div className="ro-stats-bar">
             {ESTADOS.map(est => {
               const count = ordenes.filter(o => o.estado === est).length;
@@ -337,46 +394,48 @@ export const RegistroOrdenes = () => {
 
           {loading
             ? <p className="ro-status">Cargando órdenes...</p>
-            : <TablaOrdenes lista={ordenesFiltradas} />
+            : <TablaOrdenes lista={ordenes} />
           }
 
           {/* Paginación */}
           <div className="ro-paginacion">
             <button
               className="ro-pag-btn"
-              onClick={() => setPagina(p => Math.max(0, p - 1))}
-              disabled={pagina === 0}
+              onClick={() => setPagina(p => Math.max(1, p - 1))}
+              disabled={pagina === 1}
             >← Anterior</button>
-            <span className="ro-pag-info">Página {pagina + 1}</span>
+            <span className="ro-pag-info">
+              Página <strong>{pagina}</strong> de <strong>{totalPaginas}</strong>
+              &nbsp;·&nbsp;{totalOrdenes} órdenes
+            </span>
             <button
               className="ro-pag-btn"
-              onClick={() => setPagina(p => p + 1)}
-              disabled={ordenes.length < POR_PAGINA}
+              onClick={() => setPagina(p => Math.min(totalPaginas, p + 1))}
+              disabled={pagina === totalPaginas}
             >Siguiente →</button>
           </div>
         </>
       )}
 
-      {/* ── MODAL DETALLE ── */}
+      {/* MODAL DETALLE */}
       {showDetalle && (
         <div className="ro-modal-overlay" onClick={() => setShowDetalle(false)}>
           <div className="ro-modal" onClick={e => e.stopPropagation()}>
             <h3>📋 Detalle de Orden</h3>
-
             {loadingDetalle ? (
               <p className="ro-status">Cargando...</p>
             ) : ordenDetalle ? (
               <>
                 <div className="ro-detalle-grid">
                   {[
-                    ["ID",        <span className="ro-mono">{ordenDetalle.id}</span>],
-                    ["Estado",    <span className={`ro-estado ${ESTADO_COLOR[ordenDetalle.estado] || ""}`}>{ordenDetalle.estado}</span>],
-                    ["Sede",      getNombreRestaurante(ordenDetalle.restauranteId)],
-                    ["Cliente",   getNombreUsuario(ordenDetalle.usuarioId)],
-                    ["Pago",      ordenDetalle.metodoPago],
-                    ["Entrega",   ordenDetalle.tipoOrden],
-                    ["Fecha",     ordenDetalle.fechaPedido ? new Date(ordenDetalle.fechaPedido).toLocaleString("es-ES") : "—"],
-                    ["Total",     <strong>${ordenDetalle.total?.toFixed(2)}</strong>],
+                    ["ID",      <span className="ro-mono">{ordenDetalle.id}</span>],
+                    ["Estado",  <span className={`ro-estado ${ESTADO_COLOR[ordenDetalle.estado] || ""}`}>{ordenDetalle.estado}</span>],
+                    ["Sede",    getNombreRestaurante(ordenDetalle.restauranteId)],
+                    ["Cliente", getNombreUsuario(ordenDetalle.usuarioId)],
+                    ["Pago",    ordenDetalle.metodoPago],
+                    ["Entrega", ordenDetalle.tipoOrden],
+                    ["Fecha",   ordenDetalle.fechaPedido ? new Date(ordenDetalle.fechaPedido).toLocaleString("es-ES") : "—"],
+                    ["Total",   <strong>${ordenDetalle.total?.toFixed(2)}</strong>],
                   ].map(([k, v]) => (
                     <div key={k} className="ro-detalle-fila">
                       <span className="ro-detalle-key">{k}</span>
@@ -384,7 +443,6 @@ export const RegistroOrdenes = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="ro-detalle-items">
                   <p className="ro-detalle-items-titulo">Artículos</p>
                   {ordenDetalle.items?.map((item, i) => (
@@ -398,7 +456,6 @@ export const RegistroOrdenes = () => {
                 </div>
               </>
             ) : <p className="ro-status">No se pudo cargar la orden.</p>}
-
             <div className="ro-modal-buttons">
               <button onClick={() => setShowDetalle(false)}>Cerrar</button>
             </div>
@@ -406,12 +463,11 @@ export const RegistroOrdenes = () => {
         </div>
       )}
 
-      {/* ── MODAL EDITAR (admin) ── */}
+      {/* MODAL EDITAR */}
       {showEditar && (
         <div className="ro-modal-overlay" onClick={() => setShowEditar(false)}>
           <form className="ro-modal" onSubmit={handleGuardarEdicion} onClick={e => e.stopPropagation()}>
             <h3>✏️ Editar Orden</h3>
-
             <div className="ro-modal-fields">
               <div className="ro-field">
                 <label>Estado</label>
@@ -419,14 +475,12 @@ export const RegistroOrdenes = () => {
                   {ESTADOS.map(est => <option key={est} value={est}>{est}</option>)}
                 </select>
               </div>
-
               <div className="ro-field">
                 <label>Método de Pago</label>
                 <select value={formEditar.metodoPago} onChange={e => setFormEditar({ ...formEditar, metodoPago: e.target.value })}>
                   {["Efectivo", "Tarjeta", "Transferencia"].map(m => <option key={m} value={m}>{m}</option>)}
                 </select>
               </div>
-
               <div className="ro-field">
                 <label>Tipo de Entrega</label>
                 <select value={formEditar.tipoOrden} onChange={e => setFormEditar({ ...formEditar, tipoOrden: e.target.value })}>
@@ -434,7 +488,6 @@ export const RegistroOrdenes = () => {
                 </select>
               </div>
             </div>
-
             <div className="ro-modal-buttons">
               <button type="button" onClick={() => setShowEditar(false)}>Cancelar</button>
               <button type="submit" className="ro-btn-confirmar">Guardar</button>
