@@ -49,12 +49,13 @@ export const Inicio = () =>{
                 
               </div>
 
-              {/* 🖼 Imagen */}
+              {}
               <div className="inicio-imagen">
-                <div className="imagen-placeholder">
-                  Imagen del Restaurante
-                </div>
-                
+                <img
+                  src ="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=500"
+                  alt = "Imagen del restaurante"
+                  className = "imagen-restaurante"
+                />
               </div>
               
 

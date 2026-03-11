@@ -61,6 +61,7 @@ async def obtener_usuarios(
     q: Optional[str] = Query(None, description="Búsqueda por nombre o email"),
     rol: Optional[str] = Query(None, description="Filtrar por rol exacto"),
     activo: Optional[bool] = Query(None, description="Filtrar por estado activo/inactivo"),
+    nit: Optional[int] = Query(None), 
 ):
     filtro: dict = {}
 
@@ -73,6 +74,8 @@ async def obtener_usuarios(
 
     if activo is not None:
         filtro["activo"] = activo
+    if nit is not None:                 
+        filtro["nit"] = nit
 
     skip = (page - 1) * page_size
 

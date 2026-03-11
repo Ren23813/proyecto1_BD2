@@ -102,33 +102,47 @@ export const RegistroOrdenes = () => {
 
   // ── Fetch órdenes paginado ───────────────────────────────────────────────
   const fetchOrdenes = useCallback(async () => {
-    setLoading(true);
-    try {
-      const params = new URLSearchParams({
-        skip: (pagina - 1) * POR_PAGINA,
-        limit: POR_PAGINA,
-      });
-      if (filtroEstado)          params.set("estado", filtroEstado);
-      if (filtroRestaurante)     params.set("restaurante_id", filtroRestaurante);
-      if (busquedaIdDebounced)   params.set("q", busquedaIdDebounced);
+      setLoading(true);
+      try {
+        const params = new URLSearchParams({ skip: (pagina - 1) * POR_PAGINA, limit: POR_PAGINA });
+        if (filtroEstado)        params.set("estado", filtroEstado);
+        if (filtroRestaurante)   params.set("restaurante_id", filtroRestaurante);
+        if (busquedaIdDebounced) params.set("q", busquedaIdDebounced);
 
-      const res = await fetch(`http://localhost:8000/ordenes/?${params}`);
-      const data = await res.json();
+        const res = await fetch(`http://localhost:8000/ordenes/?${params}`);
+        const data = await res.json();
 
-      if (Array.isArray(data)) {
-        // Fallback: back sin paginación todavía
-        setOrdenes(data);
-        setTotalOrdenes(data.length);
-      } else {
-        setOrdenes(data.items ?? []);
-        setTotalOrdenes(data.total ?? 0);
+        const lista = Array.isArray(data) ? data : (data.items ?? []);
+        if (!Array.isArray(data)) setTotalOrdenes(data.total ?? 0);
+        else setTotalOrdenes(data.length);
+
+        // ── Fetch usuarios faltantes en paralelo ──
+        const idsNuevos = [...new Set(lista.map(o => o.usuarioId))]
+          .filter(id => id && !usuariosMap.has(id));
+
+        if (idsNuevos.length > 0) {
+          const resultados = await Promise.allSettled(
+            idsNuevos.map(id => fetch(`http://localhost:8000/usuarios/${id}`).then(r => r.json()))
+          );
+
+          setUsuariosMap(prev => {
+            const next = new Map(prev);
+            resultados.forEach((r, i) => {
+              if (r.status === "fulfilled" && r.value?.id) {
+                next.set(idsNuevos[i], r.value);
+              }
+            });
+            return next;
+          });
+        }
+
+        setOrdenes(lista);
+      } catch {
+        showToast("Error cargando órdenes", "error");
+      } finally {
+        setLoading(false);
       }
-    } catch {
-      showToast("Error cargando órdenes", "error");
-    } finally {
-      setLoading(false);
-    }
-  }, [pagina, filtroEstado, filtroRestaurante, busquedaIdDebounced]);
+    }, [pagina, filtroEstado, filtroRestaurante, busquedaIdDebounced, usuariosMap]);
 
   useEffect(() => { fetchOrdenes(); }, [fetchOrdenes]);
 
@@ -147,11 +161,10 @@ export const RegistroOrdenes = () => {
     setOrdenesNit([]);
     try {
       // Buscar usuario por NIT directamente en el back
-      const resU = await fetch(`http://localhost:8000/usuarios/?q=${nitBusqueda}&page_size=5`);
+      const resU = await fetch(`http://localhost:8000/usuarios/?nit=${nitBusqueda.trim()}`);
       const dataU = await resU.json();
       const lista = Array.isArray(dataU) ? dataU : (dataU.items ?? []);
-      const u = lista.find(u => u.nit?.toString() === nitBusqueda.trim());
-
+      const u = (dataU.items ?? [])[0];
       if (!u) {
         showToast("NIT no encontrado en el sistema", "error");
         return;

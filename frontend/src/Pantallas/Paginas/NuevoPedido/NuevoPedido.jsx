@@ -8,7 +8,6 @@ export const NuevoPedido = () => {
   const navigate = useNavigate();
 
   const [restaurantes, setRestaurantes] = useState([]);
-  const [usuarios, setUsuarios] = useState([]);
   const [menuCompleto, setMenuCompleto] = useState([]);
 
   // Cliente
@@ -31,28 +30,36 @@ export const NuevoPedido = () => {
   const [mensajeModal, setMensajeModal] = useState({ titulo: "", cuerpo: "", esExito: false });
   const [procesando, setProcesando] = useState(false);
 
+  // ── Carga inicial: restaurantes y menú (sin usuarios) ──
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [resR, resM, resU] = await Promise.all([
+        const [resR, resM] = await Promise.all([
           fetch("http://localhost:8000/restaurantes/"),
           fetch("http://localhost:8000/articulosMenu/"),
-          fetch("http://localhost:8000/usuarios/")
         ]);
         setRestaurantes(await resR.json());
         setMenuCompleto(await resM.json());
-        setUsuarios(await resU.json());
       } catch { console.error("Error cargando datos iniciales"); }
     };
     fetchData();
   }, []);
 
-  // Buscar usuario por NIT al escribir
+  // ── Buscar usuario por NIT contra el backend ──
   useEffect(() => {
     if (!nitBusqueda) { setUsuarioEncontrado(null); return; }
-    const user = usuarios.find(u => u.nit?.toString() === nitBusqueda);
-    setUsuarioEncontrado(user || null);
-  }, [nitBusqueda, usuarios]);
+
+    const buscar = async () => {
+      try {
+        const res = await fetch(`http://localhost:8000/usuarios/?nit=${nitBusqueda}`);
+        const data = await res.json();
+        const encontrado = (data.items ?? [])[0] ?? null;
+        setUsuarioEncontrado(encontrado);
+      } catch { setUsuarioEncontrado(null); }
+    };
+
+    buscar();
+  }, [nitBusqueda]);
 
   const idRestaurante = restaurantes.find(r => r.nombre === sedeNombre)?.id;
 
@@ -60,7 +67,7 @@ export const NuevoPedido = () => {
     .filter(p => p.restauranteId === idRestaurante && p.disponible)
     .filter(p => p.nombre.toLowerCase().includes(busquedaMenu.toLowerCase()));
 
-  // Carrito
+  // ── Carrito ──
   const agregarAlCarrito = (p) => {
     setCarrito(prev => {
       const ex = prev.find(i => i.articuloId === p.id);
@@ -81,12 +88,13 @@ export const NuevoPedido = () => {
   const total = carrito.reduce((s, i) => s + i.precio * i.cantidad, 0);
   const totalItems = carrito.reduce((s, i) => s + i.cantidad, 0);
 
-  // Validación del formulario
+  // ── Validación ──
   const puedeConfirmar =
     idRestaurante &&
     carrito.length > 0 &&
     (usuarioEncontrado || (nitBusqueda && nuevoUsuario.nombre && nuevoUsuario.email));
 
+  // ── Procesar pedido ──
   const procesarPedido = async () => {
     setProcesando(true);
     try {

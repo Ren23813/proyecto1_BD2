@@ -38,10 +38,10 @@ export const Resenas = () => {
     const buscarUsuario = async () => {
       if (nitBusqueda.length > 2) {
         try {
-          const res = await fetch(`http://localhost:8000/usuarios/`);
-          const usuarios = await res.json();
+          const res = await fetch(`http://localhost:8000/usuarios/?nit=${nitBusqueda.trim()}`);
+          const data = await res.json();
           // CORRECCIÓN: Convertimos u.nit a String para comparar correctamente
-          const encontrado = usuarios.find(u => String(u.nit) === nitBusqueda);
+          const encontrado = data.items[0];
           
           if (encontrado) {
             setNombreUsuario(encontrado.nombre);
