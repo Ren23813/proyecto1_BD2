@@ -98,6 +98,20 @@ async def obtener_restaurante(id: str):
     return restaurante_serializer(restaurante)
 
 
+
+@router.put("/{id}/ubicacion")
+async def actualizar_ubicacion(id: str, coordinates: List[float]):
+
+    validar_object_id(id)
+
+    await coleccion.update_one(
+        {"_id": ObjectId(id)},
+        {"$set": {"ubicacion.coordinates": coordinates}}
+    )
+
+    restaurante = await coleccion.find_one({"_id": ObjectId(id)})
+    return restaurante_serializer(restaurante)
+
 # UPDATE
 @router.put("/{id}")
 async def actualizar_restaurante(id: str, data: RestauranteUpdate):

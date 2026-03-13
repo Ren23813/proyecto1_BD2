@@ -188,6 +188,19 @@ async def actualizar_usuario(id: str, data: UsuarioUpdate):
     return usuario_serializer(actualizado)
 
 
+@router.delete("/{id}/roles/{rol}")
+async def eliminar_rol(id: str, rol: str):
+
+    validar_object_id(id)
+
+    await coleccion.update_one(
+        {"_id": ObjectId(id)},
+        {"$pull": {"roles": rol}}
+    )
+
+    usuario = await coleccion.find_one({"_id": ObjectId(id)})
+    return usuario_serializer(usuario)
+
 # ── DELETE (soft delete) ──────────────────────────────────────────────────────
 
 @router.delete("/{id}")
